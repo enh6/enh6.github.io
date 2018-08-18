@@ -318,7 +318,7 @@ class Node : public EventTarget {
 
 ### Isolate，Context，World
 
-当你编写V8 API有关的代码时，了解Isolate，Context和World的概念非常重要。它们分别由代码库中的`v8::Isolate`，`v8::Context``和DOMWrapperWorld`表示。
+当你编写V8 API有关的代码时，了解Isolate，Context和World的概念非常重要。它们分别由代码库中的`v8::Isolate`，`v8::Context`和`DOMWrapperWorld`表示。
 
 Isolate对应于一个物理线程。Isolate:Blink中的物理线程 =  1:1。主线程有自己的Isolate。worker线程有自己的Isolate。
 

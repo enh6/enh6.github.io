@@ -1,6 +1,6 @@
 ---
 layout: post
-title: stb_truetype 抗锯齿软件渲染器第二版工作原理
+title: stb_truetype抗锯齿软件渲染器第二版工作原理
 author: enh6
 date: 2017-05-30
 categories: blog
