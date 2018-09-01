@@ -1,8 +1,9 @@
 title: Hutrua Space
 author: enh6
 description: Personal website and blog of enh6.
+url: "https://www.hutrua.com"
 
-github_username:  enh6
+github_username: enh6
 rss: rss
 
 show_excerpts: false # set to true to show excerpts on the homepage
