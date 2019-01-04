@@ -1,14 +1,8 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: "Zpix subset";
-  src: url("Zpix_subset.woff2");
-  font-weight: normal;
-}
-
 // Define defaults for each variable.
 
-$base-font-family: "Zpix subset", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -82,10 +76,6 @@ a:hover {
 
 .social-media-list a:hover .username {
   text-decoration: none;
-}
-
-code, pre {
-  font-family: $base-font-family;
 }
 
 .post-title,
