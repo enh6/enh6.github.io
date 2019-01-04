@@ -24,18 +24,24 @@ Unicode中有同一个字符对应多个不同的码位的情况。中文文本�
 
 更多的例子可以参考Unicode官网上的[容易混淆的字符列表](https://www.unicode.org/Public/security/latest/confusables.txt)。
 
-#### 4. 等价字符
+#### 3. 等价字符
 
 西文中有声调的字符可以用单个字符表示也可以用字符加声调组合表示。例如`café`中的`é`，可以用单个字符`é`（`u+00E9`)表示，也可以用`e`加上音调`U+0301`来表示(`é`)。
 
 Unicode正规化（normalization）可以把等价字符转换为完全一样的字符。这里正好是反其道而行之。
 
-#### 5. 各种空格
+#### 4. 各种空格
 
 Unicode中有各种各样，各种宽度的空格，总共有[一二十种](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)之多。把正常的空格替换为其他的空格还是很难被发现的。
 
-#### 3. 调整文字方向
+#### 5. 调整文字方向
 
 Unicode支持不同的文字书写方向。Right-to-Left Override字符`U+202E`和Pop Directional Format字符`U+202C`配合可以改变文字书写方向。例如从右向左写的`人好个是你`就变成`‮人好个是你‬`了，看起来和`你是个好人`是一样的。
 
 这个方法会在选择文本时露馅：方向不对了。而且在换行的情况下也会显示错误的文字顺序。
+
+#### 6. <del>Surrogate Pair</del>
+
+Unicode基本平面BMP以外的字符，也就是无法用两个字节表示的字符，可以用两个基本平面内的Surrogate字符来表示。例如emoji字符就在基本平面外，😀（`U+1F600`）可以用Surrogate Pair`U+D83D`加`U+DE00`表示。
+
+然而，Surrogate Pair只能在UTF-16编码中使用，在其他编码如UTF-8中是无效的；而正常编码的码位超过了两字节，无法在UTF-16编码中表示。所以这个方法并不可行。
