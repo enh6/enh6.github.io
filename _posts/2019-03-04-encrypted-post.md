@@ -26,4 +26,4 @@ categories: blog
 
 好了，现在就可以开心的在开源repo中完成自闭姿势了。这一篇日志只是一个测试，密码是`123456789`，所以加密的内容其实大家都能看的到啦。<span class='hid' data-text='U2FsdGVkX1+HxpEbSUifMJgotGBHomm3F+lg9goRl534aWDT69uUI2TrpNy/lU803XnLeFAwQz8Ta4iBg2HKcSQqV0neii3JPlKBUQaRzUtUFGwT0C9uuAW+TIPnQrQK'>\*\*\*\*encrypted text\*\*\*\*</span>
 
-<script src='/js/hid.js' defer></script>
+<script src='/assets/js/hid.js' defer></script>

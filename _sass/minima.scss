@@ -55,33 +55,3 @@ $on-large:         $on-laptop !default;
   "minima/syntax-highlighting"
 ;
 
-figure {
-  img {
-    margin: 0 auto;
-  }
-  figcaption {
-    text-align: center;
-    color: grey;
-  }
-}
-
-body {
-  overflow-wrap: break-word;
-}
-
-a:hover {
-  text-decoration: none;
-  color: lighten($text-color, 30%);
-}
-
-.social-media-list a:hover .username {
-  text-decoration: none;
-}
-
-.post-title,
-.post-content h1 {
-  @include relative-font-size(2);
-  letter-spacing: -1px;
-  line-height: 1.2;
-}
-

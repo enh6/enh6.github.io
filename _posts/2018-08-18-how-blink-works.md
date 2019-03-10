@@ -33,7 +33,7 @@ Blink是一个Web渲染引擎。粗略地说，Blink实现了一个浏览器标�
 
 Blink通过[content public API](https://cs.chromium.org/chromium/src/content/public/)集成到Chromium，Android WebView和Opera等用户中。
 
-{% include image.html img="images/blink-1.png" %}
+{% include image.html img="blink-1.png" %}
 
 从代码库的角度来看，Blink通常指的是`//third_party/blink/`。从项目角度来看，Blink通常是指实现Web平台功能的项目。实现Web平台功能的代码在`//third_party/ blink/`，`//content/renderer/`，`//content/browser/`等地方。
 
@@ -47,7 +47,7 @@ Chromium是[多进程架构](https://www.chromium.org/developers/design-document
 
 鉴于renderer进程在沙箱中运行，Blink需要请求browser进程进行系统调用(如文件访问，播放音频)和访问用户数据(如cookie，密码)。这个browser进程和renderer进程间的通信由[Mojo](https://chromium.googlesource.com/chromium/src/+/master/mojo/README.md)实现。(注：过去我们使用的是[Chromium IPC](https://www.chromium.org/developers/design-documents/inter-process-communication)， 有些地方仍在使用它。但是它已经被弃用，并且在底层使用Mojo。) 在Chromium方面，正在进行的 [Servicification](https://www.chromium.org/servicification)工作正在将browser进程抽象为一组service。从Blink的角度来看，Blink可以使用Mojo与这些service和browser进程进行交互。
 
-{% include image.html img="images/blink-2.png" %}
+{% include image.html img="blink-2.png" %}
 
 更多信息：
 
@@ -68,7 +68,7 @@ Blink和V8可能会创建一些内部线程来处理WebAudio，数据库，GC等
 
 对于跨线程通信，必须使用PostTask API进行消息传递。除了几个出于性能原因需要使用的地方，不鼓励使用共享内存。这就是为什么Blink代码库中看不到很多MutexLocks的原因。
 
-{% include image.html img="images/blink-3.png" %}
+{% include image.html img="blink-3.png" %}
 
 更多信息：
 
@@ -89,7 +89,7 @@ Blink由[BlinkInitializer::Initialize()](https://cs.chromium.org/chromium/src/th
 
 [Blink public API](https://cs.chromium.org/chromium/src/third_party/blink/public/?q=blink/public&sq=package:chromium&dr)是向Chromium暴露`//third_party/blink/`的功能的一层API。这一层API只是从WebKit继承而来的历史包袱。在WebKit时代，Chromium和Safari共享了WebKit的实现，因此需要一层API将Webkit的功能暴露给Chromium和Safari。现在Chromium是`//third_party/blink/`的唯一embedder了，这一层API就没有意义了。我们正在将web平台代码从Chromium移动到Blink，以减少Blink public API的数量(这个项目叫做[Onion Soup](https://docs.google.com/document/d/1K1nO8G9dO9kNSmtVz2gJ2GG9gQOTgm65sJlV3Fga4jE/edit#))。
 
-{% include image.html img="images/blink-4.png" %}
+{% include image.html img="blink-4.png" %}
 
 ### 目录结构和依赖关系
 
@@ -326,7 +326,7 @@ Context对应于全局对象(对Frame来说，它是Frame的window对象)。由�
 
 World概念是为了支持Chrome扩展程序内容脚本。World不与Web标准中的任何内容对应。内容脚本希望与网页共享DOM，但出于安全原因，内容脚本的JavaScript对象必须与网页的JavaScript堆隔离。 (一个内容脚本的JavaScript堆也必须与另一个内容脚本的JavaScript堆隔离。)为了实现隔离，主线程为网页创建一个main world，为每个内容脚本创建一个隔离的world。main world和隔离的world可以访问相同的C++ DOM对象，但它们的JavaScript对象是隔离的。通过为一个C++DOM对象创建多个V8 wrapper来实现这种隔离。即每个World一个V8 wrapper。
 
-{% include image.html img="images/blink-5.png" %}
+{% include image.html img="blink-5.png" %}
 
 Context，World和Frame之间有什么关系？
 
@@ -391,7 +391,7 @@ assert(div.firstChild.foo === "bar");  //...这会失败
 
 从Blink收到HTML文件，到像素显示在屏幕上，经过了很长的一段旅程。渲染管线的架构如下。
 
-{% include image.html img="images/blink-6.png" %}
+{% include image.html img="blink-6.png" %}
 
 阅读[这个优秀的演示文档](https://docs.google.com/presentation/d/1boPxbgNrTU0ddsc144rcXayGA_WF53k96imRH8Mp34Y/edit#slide=id.p)，以了解渲染管道的每个阶段所作的工作。(我不认为我能写出比这更好的解释了:-)
 

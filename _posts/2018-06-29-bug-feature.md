@@ -10,7 +10,7 @@ categories: blog
 
 我常用zhihu.com/search这个老版的页面搜索关键词，然后点搜索建议里的问题页面，然后点“桌面版网站”，看所有的回答。但在当前标签页打开页面的时候，点“桌面版网站”会回到zhihu.com/search的桌面版。只有在新标签页打开时，点“桌面版网站”才会正常加载问题页面的桌面版。
 
-{% include image.html title="Zhihu search" img="images/zhihu.png"
+{% include image.html title="Zhihu search" img="zhihu.png"
    caption="移动端的知乎搜索页面" %}
 
 在被这个问题恶心了几个月后，我终于受不鸟了，决定看看到底是什么原因。

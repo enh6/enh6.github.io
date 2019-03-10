@@ -38,7 +38,7 @@ The classic algorithm for filling such a polygon simply computes the same calcul
 
 用经典算法填充多边形就是简单的逐点增量的进行这个计算。
 
-{% include image.html img="images/stb-1.jpg" %}
+{% include image.html img="stb-1.jpg" %}
 
 For any scanline (e.g. the green lines above), we can start at negative infinity (i.e. anywhere to the left of the polygon) and scan along the line, counting crossings. Whenever the crossing count goes from zero to non-zero, we begin a filled region; whenever it goes from non-zero to zero, we end a filled region. For a closed polygon, it will always end up zero if it started at zero. (There are various things one must be careful about, e.g. if a vertex falls exactly on a scanline, we must be careful how we count those edges as 'crossing' that scanline. These are engineering details that don't affect the algorithm, and don't actually require much or any code if the right conventions are used.)
 
@@ -78,13 +78,13 @@ I'm not sure if I read this algorithm somewhere or if I (re-)invented it myself,
 
 [交点x坐标是一个小数，但上面算法是逐像素的，把交点x坐标作为整数处理，小数部分没用到，所以说有更多的信息没有利用。]
 
-{% include image.html img="images/stb-2.jpg" %}
+{% include image.html img="stb-2.jpg" %}
 
 Here we've divided the lower "scanline" into multiple pixels, where each blue tick mark represents the boundary between pixels. We can easily measure how much of the scanline line segment between two pixels is "inside" the polygon, by coloring the parts of the line that are inside a different color:
 
 下图中我们把扫描线切成了多个像素，蓝色标记了像素的边界。我们很容易测量一个像素的线段有多长在多边形里面。我们用不同的颜色标记出了在多边形里的线段：
 
-{% include image.html img="images/stb-3.jpg" %}
+{% include image.html img="stb-3.jpg" %}
 
 Here we can see that pixel #1 is about 25% pink, pixel 3 is about 80% pink, and pixel #4 is 100% pink. Thus we can determine that the (one-dimensional) anti-aliasing "coverage" of each of those pixels are 25%, 80%, and 100%.
 
@@ -124,7 +124,7 @@ A classic algorithm for measuring the area of a concave polygon is to compute th
 
 一个经典的测量凹多边形面积的算法是计算每条边对应的三角形的有符号的面积之和。[每条边和左下角的原点组成一个三角形，绿色是正的面积，红色是负的面积。]
 
-{% include image.html img="images/stb-4.jpg" %}
+{% include image.html img="stb-4.jpg" %}
 
 as this merely requires computing a cross-product per edge.
 
@@ -134,7 +134,7 @@ Perehaps less frequently used, but based on the same principle, one can measure 
 
 可能不太常见，但基于同样的原理，我们也可以通过计算每条边对应的直角梯形的有符号的面积之和来测量面积。[每条边和x轴组成一个直角梯形]
 
-{% include image.html img="images/stb-5.jpg" %}
+{% include image.html img="stb-5.jpg" %}
 
 The area of an axially-aligned right-trapezoid is particularly easy to compute, and these fit very well into the scanline framework.
 
@@ -178,7 +178,7 @@ In other words, we want to compute something like the following (where color rep
 
 换句话说，我们想计算下面的区域（颜色表示不同的边的贡献，而不是表示面积的正负）：
 
-{% include image.html img="images/stb-6.jpg" %}
+{% include image.html img="stb-6.jpg" %}
 
 Here, each edge contributes to a right-extending trapezoid that covers multiple pixels, and theoretically extends infinitely far to the right. (The shapes within a single pixel may not be a trapezoid, e.g. the third pink shape, but it decomposes easily into a trapezoid and a rectangle.)
 
@@ -296,7 +296,7 @@ To avoid this complexity, we can treat an intersection with the top the same as 
 
 [确切的说，是在一条水平的扫描线内，一条边只经过了一个像素]
 
-{% include image.html img="images/stb-7.jpg" %}
+{% include image.html img="stb-7.jpg" %}
 
 Here two of the four possible versions of this case are shown (the other two intersect only at the top or the bottom).
 
@@ -308,9 +308,9 @@ The calculation of the trapezoidal area covered to the right of these edges is s
 
 #### Case 2: The edge touches two or more pixels 第二种情况：边穿过多个像素
 
-{% include image.html img="images/stb-8.jpg" %}
+{% include image.html img="stb-8.jpg" %}
 
-{% include image.html img="images/stb-9.jpg" %}
+{% include image.html img="stb-9.jpg" %}
 
 Computing the area covered by the right-extending trapezoids for these edges isn't much harder. In each case we must compute the intersections with the left and right sides of the pixels to evaluate the trapezoid formula mentioned above. However, once we compute the leftmost pixel's right-side intersection, the following intersections all increase linearly; in the same way that the vertical scanning algorithm simply steps the current x by dx/dy, so too can we simply step the y value of the side intersection by dy/dx.
 
@@ -346,7 +346,7 @@ Case 2 is described as processing the pixels left-to-right, but the edges may sl
 
 第二种情况描述了从左至右处理像素，但边的斜率可能和第二种情况里展示的相反，那么计算结果就会不正确，例如第6步。但是我们可以看到各个像素被下面两个形状所覆盖的面积是完全一样的。
 
-{% include image.html img="images/stb-10.jpg" %}
+{% include image.html img="stb-10.jpg" %}
 
 Thus, we can write Case 2 strictly in terms of e.g. edges that slope NE-SW (regardless of direction); to handle edges that slope NW-SE, we simply flip the edge vertically (not swapping the endpoints, but actually flipping the y-coordinates and negating the slopes), and then use Case 2.
 
@@ -430,7 +430,7 @@ The algorithm exactly computes the area of polygons intersecting a given pixel. 
 
 这个算法精确的计算多边形与一个像素相交的面积。然而如果多个重叠的多边形与同一个像素相交，这个算法会计算这些多边形的面积，而不是像素被覆盖的部分的面积。
 
-{% include image.html img="images/stb-11.jpg" %}
+{% include image.html img="stb-11.jpg" %}
 
 For example, if the entire shape above were within a single pixel, the algorithm would correctly compute the coverage of the pixel. However, if the interior hole were wound in the opposite direction, it would cease to be a hole, and the entire shape would be filled. In this case, the new algorithm would report the signed area of the shape as the sum of the outer shape and the inner shape, when the actual coverage of the pixel would simply be the area of the outer shape (the area covered by the inner shape is already counted in the outer shape's area, so that area is double-counted).
 

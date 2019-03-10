@@ -16,7 +16,7 @@ categories: blog
 
 不过，虽然本人数学学渣，但这毕竟只是个二次方程嘛。我初中什么样的二次方程没见过？不知道比这个高到哪里去了！于是本人当时就画了一个图，用这样的数据，你用二次多项式给我拟合一个看看！
 
-{% include image.html title="LSQ approximation" img="images/lsq.png" %}
+{% include image.html title="LSQ approximation" img="lsq.png" %}
 
 如图所示，手指快速滑动屏幕，然后快速停下，然后才离开屏幕。用这样的输入数据，拟合得到的手指离开时的速度正好与我们手指滑动的方向相反，于是手指离开屏幕的时候，屏幕就会又相反方向滑了。(快速停下与手指离开屏幕之间时间间隔需小于80毫秒)
 
