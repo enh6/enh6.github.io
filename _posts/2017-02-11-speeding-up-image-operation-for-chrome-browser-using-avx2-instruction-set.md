@@ -2,7 +2,6 @@
 layout: post
 title: 使用AVX2指令集加速Chrome浏览器的图像操作
 author: enh6
-date: 2017-02-11
 categories: blog
 ---
 

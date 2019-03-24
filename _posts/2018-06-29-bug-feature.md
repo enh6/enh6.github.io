@@ -2,7 +2,6 @@
 layout: post
 title: 这不是bug，这是个feature？
 author: enh6
-date: 2018-06-29
 categories: blog
 ---
 

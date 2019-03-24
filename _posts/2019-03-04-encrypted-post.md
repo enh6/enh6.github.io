@@ -2,7 +2,6 @@
 layout: post
 title: 日志加密，在开放环境中自闭
 author: enh6
-date: 2019-03-04
 categories: blog
 ---
 
