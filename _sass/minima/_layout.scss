@@ -210,11 +210,17 @@
 }
 
 .post-list {
-  margin-left: 0;
+  margin-left: 90px;
   list-style: none;
 
   > li {
     margin-bottom: $spacing-unit / 2;
+  }
+
+  .post-meta {
+    margin-left: -90px;
+    float: left;
+    line-height: $base-line-height * 1.33;
   }
 }
 
@@ -225,7 +231,6 @@
 
 .post-link {
   @include relative-font-size(1.25);
-  margin-left: $spacing-unit / 4;
 }
 
 
