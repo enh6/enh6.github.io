@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《娱乐至死》阅读笔记
+title: 读书笔记 -《娱乐至死》
 author: enh6
 categories: blog
 tags: private
