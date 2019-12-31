@@ -13,7 +13,7 @@ permalink: /all/
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
         <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
+          {{ post.title }}
         </a>
     </li>
     {%- endunless -%}
@@ -27,7 +27,7 @@ permalink: /all/
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
         <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
+          {{ post.title }}
         </a>
     </li>
     {%- endif -%}
