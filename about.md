@@ -18,4 +18,4 @@ permalink: /about/
 
 - 联系方式
 
-  enh6 爱特 qq.com
+  enh6 爱特 hutrua.com
