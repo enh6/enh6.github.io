@@ -3,7 +3,7 @@ layout: post
 title: 读书笔记 -《宪法学导论》
 author: enh6
 categories: blog
-tags: private
+tags: note
 ---
 
 - 《宪法学导论》

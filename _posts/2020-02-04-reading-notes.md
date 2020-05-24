@@ -3,7 +3,7 @@ layout: post
 title: 读书笔记 -《「中间地带」的革命 —— 国际大背景下看中共成功之道》
 author: enh6
 categories: blog
-tags: private
+tags: note
 ---
 
 - 《「中间地带」的革命 —— 国际大背景下看中共成功之道》

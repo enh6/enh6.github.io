@@ -3,7 +3,7 @@ layout: post
 title: 读书笔记 -《娱乐至死》
 author: enh6
 categories: blog
-tags: private
+tags: note
 ---
 
 (复制粘贴自[豆瓣读书笔记](https://book.douban.com/people/4508071/annotation/1062193/))

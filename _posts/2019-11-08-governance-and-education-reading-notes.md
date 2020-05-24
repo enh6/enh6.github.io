@@ -3,7 +3,7 @@ layout: post
 title: 读书笔记 -《统治与教育》
 author: enh6
 categories: blog
-tags: private
+tags: note
 ---
 
 上个月在多抓鱼上买到了[《统治与教育》](https://book.douban.com/subject/26675905/)这本书，断断续续以一天一章的速度读完了。

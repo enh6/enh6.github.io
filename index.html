@@ -8,7 +8,7 @@ layout: default
   {%- endif -%}
   <ul class="post-list">
     {%- for post in site.posts -%}
-    {%- unless post.tags contains "private" -%}
+    {%- unless post.tags contains "private" or post.tags contains "note" -%}
     <li>
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>

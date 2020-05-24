@@ -5,10 +5,11 @@ permalink: /all/
 ---
 
 <div>
+
   <h2 class="post-list-heading">Tech</h2>
   <ul class="post-list">
     {%- for post in site.posts -%}
-    {%- unless post.tags contains "private" -%}
+    {%- unless post.tags contains "private" or post.tags contains "note" -%}
     <li>
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -19,10 +20,26 @@ permalink: /all/
     {%- endunless -%}
     {%- endfor -%}
   </ul>
+
   <h2 class="post-list-heading">Personal</h2>
   <ul class="post-list">
     {%- for post in site.posts -%}
     {%- if post.tags contains "private" -%}
+    <li>
+      {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+
+  <h2 class="post-list-heading">Reading Notes</h2>
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    {%- if post.tags contains "note" -%}
     <li>
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
