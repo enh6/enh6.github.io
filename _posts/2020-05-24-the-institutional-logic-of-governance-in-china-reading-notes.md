@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 读书笔记 - 《中国国家治理的制度逻辑》
+title: 《中国国家治理的制度逻辑》
 author: enh6
 categories: blog
 tags: note

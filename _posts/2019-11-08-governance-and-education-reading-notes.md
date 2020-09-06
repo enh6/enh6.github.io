@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 读书笔记 -《统治与教育》
+title: 《统治与教育》
 author: enh6
 categories: blog
 tags: note

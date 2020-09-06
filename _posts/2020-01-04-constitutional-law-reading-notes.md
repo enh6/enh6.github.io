@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 读书笔记 -《宪法学导论》
+title: 《宪法学导论》
 author: enh6
 categories: blog
 tags: note

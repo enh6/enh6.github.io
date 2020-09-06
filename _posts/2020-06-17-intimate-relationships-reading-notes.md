@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 读书笔记 - 《亲密关系》
+title: 《亲密关系》
 author: enh6
 categories: blog
 tags: note
