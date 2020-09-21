@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>我的进度条</title>
+        <style type="text/css">
+h1 {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#d1 {
+    width: 600px;
+    margin: 10px auto;
+    position: relative;
+}
+
+#toolip {
+    display: none;
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 3px;
+}
+        </style>
+    </head>
+    <body>
+        <h1>我的进度条</h1>
+        <div id="d1">
+            <p id="toolip"></p>
+            <canvas id="c1"></canvas>
+        </div>
+        <script type="text/javascript" charset="utf-8">
+window.onload = function () {
+    var div = document.getElementById("d1");
+    div.addEventListener("mousemove", mmove, true);
+    div.addEventListener("mouseenter", menter, true);
+    div.addEventListener("mouseleave", mleave, true);
+
+    var can = document.getElementById("c1");
+    can.width = 600;
+    can.height = 1700;
+    var ctx = can.getContext("2d");
+
+    var toolip = document.getElementById("toolip");
+
+    var size = 5, margin = 1;
+
+    var cols = Math.floor(can.width / (size + margin));
+
+    var important_dates = [];
+    var begin = new Date().setFullYear(1990, 1 - 1, 1);
+
+    var birth = new Date().setFullYear(1990, 1 - 1, 1); // It's fake!
+    var birthIdx = daysBetween(begin, birth);
+    important_dates[birthIdx] = '我的出生日';
+
+    var now = new Date();
+    var nowIdx = daysBetween(begin, now);
+    var nowColor = 'red';
+    important_dates[nowIdx] = '今天';
+
+    var liveYear = 70;
+    var death = new Date(birth.valueOf());
+    death.setFullYear(death.getFullYear() + liveYear);
+    var deathIdx = daysBetween(begin, death);
+    important_dates[deathIdx] = liveYear + '大寿！';
+
+    var focusedIdx = 0;
+
+    function addImportantDate(year, month, date, item) {
+        var date = new Date.setFullYear(year, month, date);
+        var idx = daysBetween(begin, date);
+        important_dates[idx] = item;
+    }
+
+    function addDays(date, days) {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+    }
+
+    function daysBetween(date1, date2) {
+        var msperday = 24 * 60 * 60 * 1000;
+        return Math.round((date2 - date1) / msperday);
+    }
+
+    function drawBlockInternal(ctx, index, fillStyle) {
+        pos = getPos(index);
+        ctx.fillStyle = fillStyle;
+        ctx.fillRect(pos.x, pos.y, size, size);
+    }
+
+    function menter() {
+        toolip.style.display = 'block';
+    }
+
+    function mleave() {
+        toolip.style.display = 'none';
+        drawBlock(focusedIdx);
+    }
+
+    function mmove(e) {
+        var rect = can.getBoundingClientRect();
+        var mousePos = {
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        };
+        var idx = getIndex(mousePos);
+        if (idx != focusedIdx && idx < endIdx) {
+            drawBlockInternal(ctx, idx, '#ff0000');
+            drawBlock(focusedIdx);
+
+            focusedIdx = idx;
+            var date = addDays(begin, idx);
+
+            toolip.style.top = (mousePos.y - 50) + 'px';
+            toolip.style.left = mousePos.x + 'px';
+
+            if (important_dates[idx]) {
+                toolip.innerHTML = important_dates[idx] + ' ' + date.toLocaleDateString();
+            } else {
+                toolip.innerHTML = date.toLocaleDateString();
+            }
+        }
+    }
+
+    function getIndex(pos) {
+        var y = Math.floor(pos.y / (size + margin));
+        var x = Math.floor(pos.x / (size + margin));
+        return y * cols + x;
+    }
+
+    function getPos(index) {
+        x = Math.floor(index % cols) * (size + margin);
+        y = Math.floor(index / cols) * (size + margin);
+        return {x:x, y:y}
+    }
+
+    function drawBlock(k) {
+        var fillStyle;
+        if (k >= birthIdx && k <= nowIdx) {
+            fillStyle = '#ff7575'; //red
+        } else if (k > nowIdx && k  <= deathIdx) {
+            fillStyle = '#00EC00'; //green
+        } else {
+            fillStyle = '#eee'; //grey
+        }
+        drawBlockInternal(ctx, k, fillStyle);
+    }
+
+    function beep() {
+        var fillStyle;
+        if (nowColor == 'red') {
+            nowColor = 'Red';
+            fillStyle = '#ff5555';
+        } else {
+            nowColor = 'red';
+            fillStyle = '#ff7575';
+        }
+        drawBlockInternal(ctx, nowIdx, fillStyle);
+        setTimeout(beep, 500);
+    }
+    setTimeout(beep, 500);
+
+    endPos = {x: can.width, y: can.height - size};
+    endIdx = getIndex(endPos);
+    for (i = 0; i < endIdx; i++){
+        drawBlock(i);
+    }
+}
+        </script>
+    </body>
+</html>
