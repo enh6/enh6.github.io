@@ -6,8 +6,6 @@ permalink: /about/
 
 - 关于我
 
-  <del title='为什么要用当前的工作或者居住地定义自己呢？这些并不重要。'>软件工程师，现居上海。</del>
-
   `undefined`
 
 - 联系方式
@@ -17,6 +15,8 @@ permalink: /about/
 - 关于本站
 
   2021-04: 添加了favicon
+  
+  2021-03: 套上了Cloudflare
 
   2020-05: 增加了「读书笔记」标签
 
