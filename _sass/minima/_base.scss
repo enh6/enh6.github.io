@@ -30,7 +30,10 @@ body {
   overflow-wrap: break-word;
 }
 
-
+::selection {
+  background: $brand-color-light;
+  color: $text-color;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
