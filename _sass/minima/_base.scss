@@ -6,7 +6,6 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
-
 }
 
 
@@ -32,7 +31,7 @@ body {
 
 ::selection {
   background: $brand-color-light;
-  color: $text-color;
+  color: white;
 }
 
 /**
