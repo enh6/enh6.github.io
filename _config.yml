@@ -12,7 +12,7 @@ date_format: "%Y-%m-%d"
 # this and add the path to the pages in order as they should show up
 header_pages:
  - all.html
- - about.md
+ - about.html
 
 plugins:
  - jekyll-feed

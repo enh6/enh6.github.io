@@ -1,0 +1,87 @@
+---
+layout: default
+title: about
+permalink: /about/
+---
+<div class="about">
+  <svg class="avatar">
+  <h2>enh6</h2>
+  <ul>
+    <li>
+      <p>关于我</p>
+      <p><code>undefined</code></p>
+    </li>
+    <li>
+      <p>联系方式</p>
+      <p><code>enh6 AT hutrua.com</code></p>
+    </li>
+  </ul>
+</div>
+<ul class="tabs">
+  <li id="tab1" class="checked">关于本站</li>
+  <li id="tab2">(自我)留言板</li>
+</ul>
+<div id="about-site">
+  <ul class="short-post-list">
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2022-02</div>
+      <div class="short-post-content">更新about页面，增加留言板</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2021-04</div>
+      <div class="short-post-content">添加了favicon</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2021-03</div>
+      <div class="short-post-content">套上了Cloudflare</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2020-05</div>
+      <div class="short-post-content">增加了「读书笔记」标签</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2020-04</div>
+      <div class="short-post-content">增加了「关于本站」</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 201?-??</div>
+      <div class="short-post-content">???</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2018-05</div>
+      <div class="short-post-content">Hello, World! 本站诞生了</div>
+    </li>
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2017-02</div>
+      <div class="short-post-content">注册域名<code>hutrua.com</code></div>
+    </li>
+  </ul>
+</div>
+<div id="short-posts" class="hide">
+  <ul class="short-post-list">
+    <li>
+      <div class="post-meta"><b>enh6</b> • 2022-02-09 18:11:00</div>
+      <div class="short-post-content">只有我自己能留言，哈哈哈</div>
+    </li>
+  </ul>
+</div>
+<script>
+  let tab1 = document.getElementById("tab1");
+  let tab2 = document.getElementById("tab2");
+  let div1 = document.getElementById("about-site");
+  let div2 = document.getElementById("short-posts");
+  tab1.addEventListener("click", (evt)=>{
+    div1.classList.remove("hide");
+    div2.classList.add("hide");
+
+    tab1.classList.add("checked");
+    tab2.classList.remove("checked");
+  });
+  tab2.addEventListener("click", (evt)=>{
+    div2.classList.remove("hide");
+    div1.classList.add("hide");
+
+    tab2.classList.add("checked");
+    tab1.classList.remove("checked");
+  });
+</script>
