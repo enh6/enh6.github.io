@@ -28,10 +28,7 @@ tags: private
 |2019|美国|[自助洗衣店 ](https://www.imdb.com/title/tt5865326/)|
 |2014|美国|[青龙复仇](https://www.imdb.com/title/tt1396523/)|
 |2014|美国|[刺杀金正恩](https://www.imdb.com/title/tt2788710/)|
-|2012|美国|[赤色黎明](https://www.imdb.com/title/tt1234719/)|
-|2009|美国|[被出卖的台湾](https://www.imdb.com/title/tt1121786/)|
 |1997|美国|[西藏七年](https://www.imdb.com/title/tt0120102/)|
-|1997|美国|[红色角落](https://www.imdb.com/title/tt0119994/)|
 |1997|美国|[达赖的一生](https://www.imdb.com/title/tt0119485/)|
 |2022|韩国|[为人民服务](https://www.imdb.com/title/tt18372308/)|
 |2018|韩国|[安市城](https://www.imdb.com/title/tt6931414/)|
@@ -41,10 +38,9 @@ tags: private
 |2017|韩国|[挖掘机](https://www.imdb.com/title/tt7506740/)|
 |2014|韩国|[购物车](https://www.imdb.com/title/tt3953834/)|
 |2012|韩国|[共谋者](https://www.imdb.com/title/tt2308860/)|
-|2012|韩国|[光海，成为王的男人](https://www.imdb.com/title/tt2290840/)|
+|2012|韩国|[双面君王](https://www.imdb.com/title/tt2290840/)|
 |2008|韩国|[神机箭](https://www.imdb.com/title/tt1185594/)|
 |2008|韩国|[北逃](https://www.imdb.com/title/tt1133922/)|
-|2007|韩国|[华丽的假期](https://www.imdb.com/title/tt0800341/)|
 
 ## 电视剧
 
