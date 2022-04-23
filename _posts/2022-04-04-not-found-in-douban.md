@@ -32,6 +32,7 @@ tags: private
 |2014|美国|[刺杀金正恩](https://www.imdb.com/title/tt2788710/)|
 |1997|美国|[西藏七年](https://www.imdb.com/title/tt0120102/)|
 |1997|美国|[达赖的一生](https://www.imdb.com/title/tt0119485/)|
+|2022|韩国|[夜叉：浴血谍战](https://www.imdb.com/title/tt12663250/)|
 |2022|韩国|[为人民服务](https://www.imdb.com/title/tt18372308/)|
 |2018|韩国|[安市城](https://www.imdb.com/title/tt6931414/)|
 |2018|韩国|[绝地隧战](https://www.imdb.com/title/tt7156436/)|
