@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2001: A Space Odyssey
+title: '2001: A Space Odyssey'
 author: enh6
 categories: blog
 tags: note
