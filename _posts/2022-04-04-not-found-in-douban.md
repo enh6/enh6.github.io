@@ -22,6 +22,7 @@ tags: private
 |2021|台湾|[哭悲](https://www.imdb.com/title/tt13872248/)|
 |2019|台湾|[返校](https://www.imdb.com/title/tt10805432/)|
 |2014|台湾|[嘉农](https://www.imdb.com/title/tt2247566/)|
+|1990|台湾|[异域](https://www.imdb.com/title/tt0100987/)|
 |2011|法国|[昂山素季](https://www.imdb.com/title/tt1802197/)|
 |2005|英国|[V字仇杀队](https://www.imdb.com/title/tt0434409/)|
 |2020|俄罗斯|[亲爱的同志](https://www.imdb.com/title/tt10796286/)|
