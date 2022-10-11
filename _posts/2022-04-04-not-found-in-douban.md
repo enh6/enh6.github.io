@@ -22,6 +22,7 @@ tags: private
 |2021|台湾|[哭悲](https://www.imdb.com/title/tt13872248/)|
 |2019|台湾|[返校](https://www.imdb.com/title/tt10805432/)|
 |2014|台湾|[嘉农](https://www.imdb.com/title/tt2247566/)|
+|2002|台湾|[爱情灵药](https://www.imdb.com/title/tt0373718/)|
 |1990|台湾|[异域](https://www.imdb.com/title/tt0100987/)|
 |2011|法国|[昂山素季](https://www.imdb.com/title/tt1802197/)|
 |2005|英国|[V字仇杀队](https://www.imdb.com/title/tt0434409/)|
@@ -46,13 +47,14 @@ tags: private
 |2008|韩国|[神机箭](https://www.imdb.com/title/tt1185594/)|
 |2008|韩国|[北逃](https://www.imdb.com/title/tt1133922/)|
 
-## 电视剧
+## 电视剧/动画剧集
 
 |2021|台湾|[斯卡罗](https://www.imdb.com/title/tt15207176/)|
 |2020|台湾|[国际桥牌社](https://www.imdb.com/title/tt11820476/)|
 |2010|台湾|[他们在毕业的前一天爆炸](https://www.imdb.com/title/tt1813893/)|
 |2011|香港|[天与地](https://www.imdb.com/title/tt2165489/)|
 |2010|日本|[坂上之云](https://www.imdb.com/title/tt1562754/)|
+|2006|日本|[死亡笔记](https://www.imdb.com/title/tt0877057/)|
 |2019|韩国|[精神变态日记](https://www.imdb.com/title/tt11133466/)|
 |2013|韩国|[总理与我](https://www.imdb.com/title/tt3284102/)|
 |2001|韩国|[明成皇后](https://www.imdb.com/title/tt2288116/)|
