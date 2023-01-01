@@ -28,8 +28,10 @@ tags: private
 |2005|英国|[V字仇杀队](https://www.imdb.com/title/tt0434409/)|
 |2020|俄罗斯|[亲爱的同志](https://www.imdb.com/title/tt10796286/)|
 |2019|日本|[航母伊吹](https://www.imdb.com/title/tt8649224/)|
+|2000|日本|[吸血鬼猎人D](https://www.imdb.com/title/tt0216651/)|
 |2021|澳大利亚|[花果飘零](https://www.imdb.com/title/tt15575176/)|
 |2022|美国|[355：谍影特攻](https://www.imdb.com/title/tt8356942/)|
+|2020|美国|[怪物猎人](https://www.imdb.com/title/tt6475714/)|
 |2019|美国|[自助洗衣店 ](https://www.imdb.com/title/tt5865326/)|
 |2014|美国|[青龙复仇](https://www.imdb.com/title/tt1396523/)|
 |2014|美国|[刺杀金正恩](https://www.imdb.com/title/tt2788710/)|
@@ -45,8 +47,10 @@ tags: private
 |2014|韩国|[购物车](https://www.imdb.com/title/tt3953834/)|
 |2012|韩国|[共谋者](https://www.imdb.com/title/tt2308860/)|
 |2012|韩国|[双面君王](https://www.imdb.com/title/tt2290840/)|
+|2011|韩国|[平壤城](https://www.imdb.com/title/tt1832438/)|
 |2008|韩国|[神机箭](https://www.imdb.com/title/tt1185594/)|
 |2008|韩国|[北逃](https://www.imdb.com/title/tt1133922/)|
+|2003|韩国|[黄山伐](https://www.imdb.com/title/tt0378078/)|
 
 ## 电视剧/动画剧集
 
