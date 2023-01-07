@@ -3,9 +3,11 @@ layout: post
 title: 一些豆瓣上没有条目的影视作品
 author: enh6
 categories: blog
-description: 豆瓣，页面，词条，条目，封杀，屏蔽，删除，404，消失，下架，搜不到，没有，被删，审查，被禁，禁片
+description: 一些豆瓣上没有条目的影视作品，持续更新中，感谢热心网友提供的补充。豆瓣，页面，词条，条目，封杀，屏蔽，删除，404，消失，下架，搜不到，没有，被删，审查，被禁，禁片。
 tags: private
 ---
+
+持续更新中，最后更新时间：2023-01-07。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -15,9 +17,11 @@ tags: private
 |2006|中国|[颐和园](https://www.imdb.com/title/tt0794374/)|
 |2004|中国|[20 30 40](https://www.imdb.com/title/tt0397229/)|
 |2021|香港|[少年](https://www.imdb.com/title/tt15743130/)|
+|2019|香港|[幻爱](https://www.imdb.com/title/tt11810546/)|
 |2018|香港|[中英街1号](https://www.imdb.com/title/tt7473032/)|
 |2016|香港|[选老顶](https://www.imdb.com/title/tt5609302/)|
 |2015|香港|[十年](https://www.imdb.com/title/tt5269560/)|
+|2013|香港|[一个复杂故事](https://www.imdb.com/title/tt3503902/)|
 |2012|香港|[一路向西](https://www.imdb.com/title/tt2370792/)|
 |1989|香港|[省港旗兵 4：地下通道](https://www.imdb.com/title/tt0103162/)|
 |2021|台湾|[哭悲](https://www.imdb.com/title/tt13872248/)|
@@ -59,6 +63,7 @@ tags: private
 |2020|台湾|[国际桥牌社](https://www.imdb.com/title/tt11820476/)|
 |2010|台湾|[他们在毕业的前一天爆炸](https://www.imdb.com/title/tt1813893/)|
 |2011|香港|[天与地](https://www.imdb.com/title/tt2165489/)|
+|2017|日本|[幼女战记](https://www.imdb.com/title/tt6455986/)|
 |2010|日本|[坂上之云](https://www.imdb.com/title/tt1562754/)|
 |2006|日本|[死亡笔记](https://www.imdb.com/title/tt0877057/)|
 |2019|韩国|[精神变态日记](https://www.imdb.com/title/tt11133466/)|
@@ -71,20 +76,24 @@ tags: private
 
 ## 纪录长片
 
+|2022|[忧郁之岛](https://www.imdb.com/title/tt15282802/)|
 |2021|何处为家：沉默|
 |2021|[登楼叹](https://www.imdb.com/title/tt14505430/)|
 |2021|[同呼吸](https://www.imdb.com/title/tt13648230/)|
 |2021|[时代革命](https://www.imdb.com/title/tt15049118/)|
+|2020|[理大围城](https://www.imdb.com/title/tt14266320/)|
 |2020|[加冕](https://www.imdb.com/title/tt12935000/)|
 |2019|[迷航](https://www.imdb.com/title/tt13236440/)|
 |2019|[独生之国](https://www.imdb.com/title/tt8923482/)|
 |2018|[我们的青春，在台湾](https://www.imdb.com/title/tt8711506/)|
+|2017|并：控制|
 |2017|[蜻蜓之眼](https://www.imdb.com/title/tt6576482/)|
 |2017|[夹边沟祭事](https://www.imdb.com/title/tt7877136/)|
 |2017|[黄之锋：青年人物对抗超级强权](https://www.imdb.com/title/tt6333072/)|
 |2017|[地厚天高](https://www.imdb.com/title/tt7875626/)|
 |2017|[中国喧嚣](https://www.imdb.com/title/tt7215388/)|
 |2017|[凶年之畔](https://www.imdb.com/title/tt6433144/)|
+|2016|[苹果的滋味](https://www.imdb.com/title/tt5890754/)|
 |2016|[海南之后](https://www.imdb.com/title/tt4079902/)|
 |2016|[塑料王国](https://www.imdb.com/title/tt6090264/)|
 |2016|[风景](https://www.imdb.com/title/tt6021632/)|
@@ -92,6 +101,7 @@ tags: private
 |2015|[大同(中国市长)](https://www.imdb.com/title/tt4056808/)|
 |2015|[凜冬烈火：乌克兰为自由而战](https://www.imdb.com/title/tt4908644/)|
 |2015|[竞相灭绝](https://www.imdb.com/title/tt1618448/)|
+|2014|[太阳，不远](https://www.imdb.com/title/tt4805912/)|
 |2012|[垃圾围城](https://www.imdb.com/title/tt1980046/)|
 |2012|[艾未未：道歉你妹](https://www.imdb.com/title/tt1845773/)|
 |2012|[我还有话要说](https://www.imdb.com/title/tt2164662/)|
