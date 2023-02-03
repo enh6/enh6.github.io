@@ -17,12 +17,6 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
-  font-kerning: normal;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -223,23 +217,45 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
-  tr {
-    &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
-    }
-  }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: 0.2em 0.4em;
+    border: 1px solid $grey-color;
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: $grey-color-light;
   }
-  td {
-    border: 1px solid $grey-color-light;
+  tr {
+    background-color: lighten($grey-color-light, 4%);
   }
+  a {
+    color: $text-color;
+  }
+}
+
+.sortable th {
+  cursor: pointer;
+}
+.sortable th.no-sort {
+  pointer-events: none;
+}
+.sortable th::after, .sortable th::before {
+  transition: color 0.1s ease-in-out;
+  font-size: 1.2em;
+  color: transparent;
+}
+.sortable th::after {
+  margin-left: 3px;
+  content: "▸";
+}
+.sortable th:hover::after {
+  color: inherit;
+}
+.sortable th.dir-d::after {
+  color: inherit;
+  content: "▾";
+}
+.sortable th.dir-u::after {
+  color: inherit;
+  content: "▴";
 }
