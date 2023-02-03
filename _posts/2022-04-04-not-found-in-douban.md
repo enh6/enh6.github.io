@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-01-07。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-02-03。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -66,6 +66,7 @@ tags: private
 |2017|日本|[幼女战记](https://www.imdb.com/title/tt6455986/)|
 |2010|日本|[坂上之云](https://www.imdb.com/title/tt1562754/)|
 |2006|日本|[死亡笔记](https://www.imdb.com/title/tt0877057/)|
+|2022|韩国|[弱小英雄](https://www.imdb.com/title/tt20234568/)|
 |2019|韩国|[精神变态日记](https://www.imdb.com/title/tt11133466/)|
 |2013|韩国|[总理与我](https://www.imdb.com/title/tt3284102/)|
 |2001|韩国|[明成皇后](https://www.imdb.com/title/tt2288116/)|
@@ -111,8 +112,10 @@ tags: private
 |2009|[1428](https://www.imdb.com/title/tt1500679/)|
 |2009|[掩埋](https://www.imdb.com/title/tt4370770/)|
 |2009|[书记](https://www.imdb.com/title/tt1859619/)|
+|2009|[目送一九四九](https://www.imdb.com/title/tt11335010/)|
 |2008|[公民哈维尔](https://www.imdb.com/title/tt0843329/)|
 |2007|[和凤鸣](https://www.imdb.com/title/tt1032880/)|
+|2006|[我虽死去](https://www.imdb.com/title/tt1666814/)|
 |2004|[寻找林昭的灵魂](https://www.imdb.com/title/tt6083394/)|
 |2003|[八九点钟的太阳](https://www.imdb.com/title/tt0381430/)|
 
