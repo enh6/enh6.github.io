@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-02-03。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-04-13。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -20,7 +20,7 @@ tags: private
     </tr>
   </thead>
   <tbody>
-<tr>
+    <tr>
       <td>未上映</td>
       <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt9150572/">独自上场</a></td>
@@ -36,6 +36,10 @@ tags: private
       <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt18372308/">为人民服务</a></td>
+    </tr><tr>
+      <td>2022</td>
+      <td>加拿大</td>
+      <td><a href="https://www.imdb.com/title/tt10514056/">沉默呼声</a></td>
     </tr><tr>
       <td>2021</td>
       <td>香港</td>
@@ -215,7 +219,7 @@ tags: private
     </tr>
   </thead>
   <tbody>
-<tr>
+    <tr>
       <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt20234568/">弱小英雄</a></td>
@@ -231,6 +235,10 @@ tags: private
       <td>2020</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt11820476/">国际桥牌社</a></td>
+    </tr><tr>
+      <td>2020</td>
+      <td>台湾</td>
+      <td><a href="https://www.imdb.com/title/tt13175760/">返校</a></td>
     </tr><tr>
       <td>2019</td>
       <td>韩国</td>
@@ -294,8 +302,12 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt15282802/">忧郁之岛</a></td>
     </tr>
     <tr>
+      <td>2022</td>
+      <td><a href="https://www.imdb.com/title/tt20199286/">长春</a></td>
+    </tr>
+    <tr>
       <td>2021</td>
-      <td>何处为家：沉默</td>
+      <td>何以为家：沉默</td>
     </tr>
     <tr>
       <td>2021</td>
