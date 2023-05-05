@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-04-13。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-05-05。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -220,6 +220,10 @@ tags: private
   </thead>
   <tbody>
     <tr>
+      <td>2023</td>
+      <td>台湾</td>
+      <td><a href="https://www.imdb.com/title/tt26687035/">人选之人—造浪者</a></td>
+    </tr><tr>
       <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt20234568/">弱小英雄</a></td>
@@ -371,6 +375,10 @@ tags: private
     </tr>
     <tr>
       <td>2016</td>
+      <td><a href="https://www.imdb.com/title/tt5278868/">情人与独裁者</a></td>
+    </tr>
+    <tr>
+      <td>2016</td>
       <td><a href="https://www.imdb.com/title/tt5890754/">苹果的滋味</a></td>
     </tr>
     <tr>
@@ -448,6 +456,10 @@ tags: private
     <tr>
       <td>2008</td>
       <td><a href="https://www.imdb.com/title/tt0843329/">公民哈维尔</a></td>
+    </tr>
+    <tr>
+      <td>2007</td>
+      <td><a href="https://www.imdb.com/title/tt1114277/">沿江而上</a></td>
     </tr>
     <tr>
       <td>2007</td>
