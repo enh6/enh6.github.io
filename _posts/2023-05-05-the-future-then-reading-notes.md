@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 未来志
+title: 《未来志》
 author: enh6
 categories: blog
 tags: note
 ---
 
-- 未来志
+- 《未来志》
 - 《大众科学》编著
 - 新星出版社 2020
 

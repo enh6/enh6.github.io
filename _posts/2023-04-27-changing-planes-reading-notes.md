@@ -1,12 +1,12 @@
 ﻿---
 layout: post
-title: 变化的位面
+title: 《变化的位面》
 author: enh6
 categories: blog
 tags: note
 ---
 
-- 变化的位面
+- 《变化的位面》
 - 厄休拉·勒古恩
 - 四川文艺出版社 后浪 2018
 
