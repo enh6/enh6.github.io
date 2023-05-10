@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-05-05。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-05-10。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -276,6 +276,10 @@ tags: private
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt1562754/">坂上之云</a></td>
     </tr><tr>
+    <td>2008</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt1158671/">狼与香辛料</a></td>
+    </tr><tr>
       <td>2006</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt0877057/">死亡笔记</a></td>
@@ -484,6 +488,9 @@ tags: private
 - 隐藏条目，只有登录用户能看到，如《天注定》。
 - 条目只有基本信息，不允许评分、短评、影评、讨论，如《大路朝天》。
 - 条目存在，站内搜索不显示结果，如《无依之地》。
+
+豆瓣替代网站：
+- [NeoDB](https://about.neodb.social/doc/howto/)
 
 <script src="/assets/js/sortable.js"></script>
 <script>
