@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-05-10。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-07-06。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -305,6 +305,14 @@ tags: private
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>2023</td>
+      <td><a href="https://www.imdb.com/title/tt27148236/">完全信任</a></td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td><a href="https://www.imdb.com/title/tt27502265/">黑衣人</a></td>
+    </tr>
     <tr>
       <td>2022</td>
       <td><a href="https://www.imdb.com/title/tt15282802/">忧郁之岛</a></td>
