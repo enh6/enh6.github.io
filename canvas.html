@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>Canvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+canvas {
+    border: 1px solid black;
+}
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <canvas width="512" height="512"></canvas>
+  </div>
+  <div>
+    <button onclick="restart()">Restart</button>
+    <button onclick="resume()">Resume</button>
+    <button onclick="pause()">Pause</button>
+  </div>
+  <div>
+    <button onclick="run(drawRandom)">Random</button>
+	<button onclick="run(drawRandom2)">Random2</button>
+	<button onclick="run(drawRandom3)">Random3</button>
+  </div>
+  <script>
+function setupCanvas(canvas) {
+  var dpr = window.devicePixelRatio || 1;
+  canvas.width = 512 * dpr;
+  canvas.height = 512 * dpr;
+  var ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  return ctx;
+}
+
+var ctx = setupCanvas(document.querySelector('canvas'));
+var idx;
+var data = null;
+var is_pause = false;
+
+var fade = function() {
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  ctx.fillStyle = `rgba(255, 255, 255, 0.005)`;
+  ctx.fillRect(0, 0, 512, 512);
+  ctx.restore();
+}
+
+var randomColor = function() {
+  return `rgb(${Math.random() * 255},
+              ${Math.random() * 255},
+              ${Math.random() * 255})`;
+}
+
+var randomPoint = function(p, r) {
+  var x = p.x + (Math.random() - 0.5) * r * 2;
+  if (x > 512) {
+    x = 512 - Math.random() * r;
+  }
+  if (x < 0) {
+    x = Math.random() * r;
+  }
+  var y = p.y + (Math.random() - 0.5) * r * 2;
+  if (y > 512) {
+    y = 512 - Math.random() * r;
+  }
+  if (y < 0) {
+    y = Math.random() * r;
+  }
+  return {'x': x, 'y': y};
+}
+
+var drawRandom = function() {
+  var x = Math.random() * 512;
+  var y = Math.random() * 512;
+
+  ctx.beginPath();
+  ctx.arc(x, y, 2, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+var drawRandom2 = function() {
+  fade();
+  
+  var x = Math.random() * 512;
+  var y = Math.random() * 512;
+  var r = Math.random() * 20;
+  
+  ctx.save();
+  ctx.fillStyle = randomColor();
+
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.restore();
+}
+
+var drawRandom3 = function() {
+  fade();
+  
+  if (data == null) {
+	data = {};
+	data.p = {'x': Math.random() * 512,
+	          'y': Math.random() * 512};
+	data.cp = randomPoint(data.p, 100);
+  }
+  
+  var p = randomPoint(data.p, 200);
+  var cp = randomPoint(p, 100);
+  
+  ctx.save();
+
+  ctx.lineWidth = 5;
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(data.p.x, data.p.y);
+  ctx.bezierCurveTo(data.cp.x, data.cp.y, cp.x, cp.y, p.x, p.y);
+  ctx.stroke();
+  ctx.restore();
+  
+  cp.x = p.x + (p.x - cp.x);
+  cp.y = p.y + (p.y - cp.y);
+  
+  data.p = p;
+  data.cp = cp;
+}
+
+var drawFunction = drawRandom;
+
+var drawLoop = function() {
+  if (!is_pause) {
+    drawFunction();
+  }
+  window.requestAnimationFrame(drawLoop);
+}
+
+window.requestAnimationFrame(drawLoop);
+
+var run = function(f) {
+  drawFunction = f;
+  restart();
+}
+
+var pause = function() {
+  is_pause = true;
+}
+
+var resume = function() {
+  is_pause = false;
+}
+
+var restart = function() {
+  idx = 0;
+  data = null;
+  ctx.clearRect(0, 0, 512, 512);
+  is_pause = false;
+}
+
+
+  </script>
+
+</body>
+
+</html>
