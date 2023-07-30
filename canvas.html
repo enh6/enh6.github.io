@@ -24,8 +24,11 @@ canvas {
   </div>
   <div>
     <button onclick="run(drawRandom)">Random</button>
-	<button onclick="run(drawRandom2)">Random2</button>
-	<button onclick="run(drawRandom3)">Random3</button>
+    <button onclick="run(drawRandom2)">Random2</button>
+    <button onclick="run(drawRandom3)">Random3</button>
+    <button onclick="run(drawHalton)">Halton</button>
+    <button onclick="run(drawConnection)">Connection</button>
+    <button onclick="run(drawConnection2)">Connection2</button>
   </div>
   <script>
 function setupCanvas(canvas) {
@@ -41,6 +44,35 @@ var ctx = setupCanvas(document.querySelector('canvas'));
 var idx;
 var data = null;
 var is_pause = false;
+
+//Generator function for Halton sequence
+//https://en.wikipedia.org/wiki/Halton_sequence
+var halton_sequence = function*(b) {
+  var n = 0, d = 1;
+  while (true) {
+    var x = d - n;
+    if (x == 1) {
+      n = 1;
+      d *= b;
+    } else {
+      y = Math.floor(d / b);
+      while (x <= y) {
+        y = Math.floor(y / b);
+      }
+      n = (b + 1) * y - x;
+    }
+    yield n / d;
+  }
+};
+
+var halton_2 = halton_sequence(2);
+var halton_3 = halton_sequence(3);
+
+var haltonPoint = function() {
+  x = halton_2.next().value * 512;
+  y = halton_3.next().value * 512;
+  return {'x': x, 'y': y};
+}
 
 var fade = function() {
   ctx.save();
@@ -74,6 +106,39 @@ var randomPoint = function(p, r) {
   return {'x': x, 'y': y};
 }
 
+var swap = function(p0, p1) {
+  x = p0.x;
+  y = p0.y;
+  p0.x = p1.x;
+  p0.y = p1.y;
+  p1.x = x;
+  p1.y = y;
+}
+
+var distance = function(p0, p1) {
+  return Math.sqrt((p0.x - p1.x) ** 2 +  (p0.y - p1.y) ** 2);
+}
+
+// To find orientation of ordered triplet (p, q, r).
+// The function returns following values
+// 0 --> p, q and r are collinear
+// 1 --> Clockwise
+// 2 --> Counterclockwise
+var orientation = function(p, q, r) {
+  var val = (q.y - p.y) * (r.x - q.x) -
+            (q.x - p.x) * (r.y - q.y);
+  if (val == 0) return 0;
+  return (val > 0)? 1: 2;
+}
+
+var isIntersect = function(p0, p1, q0, q1) {
+  var o1 = orientation(p0, p1, q0);
+  var o2 = orientation(p0, p1, q1);
+  var o3 = orientation(q0, q1, p0);
+  var o4 = orientation(q0, q1, p1);
+  return (o1 != o2 && o3 != o4);
+}
+
 var drawRandom = function() {
   var x = Math.random() * 512;
   var y = Math.random() * 512;
@@ -103,10 +168,10 @@ var drawRandom3 = function() {
   fade();
   
   if (data == null) {
-	data = {};
-	data.p = {'x': Math.random() * 512,
-	          'y': Math.random() * 512};
-	data.cp = randomPoint(data.p, 100);
+    data = {};
+    data.p = {'x': Math.random() * 512,
+              'y': Math.random() * 512};
+    data.cp = randomPoint(data.p, 100);
   }
   
   var p = randomPoint(data.p, 200);
@@ -120,6 +185,7 @@ var drawRandom3 = function() {
   ctx.moveTo(data.p.x, data.p.y);
   ctx.bezierCurveTo(data.cp.x, data.cp.y, cp.x, cp.y, p.x, p.y);
   ctx.stroke();
+
   ctx.restore();
   
   cp.x = p.x + (p.x - cp.x);
@@ -127,6 +193,149 @@ var drawRandom3 = function() {
   
   data.p = p;
   data.cp = cp;
+}
+
+var drawHalton = function() {
+  var p = haltonPoint();
+
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+//if line p[idx0] p[idx1] intersects polygon p[0], p[1], ... p[idx-1]
+var intersect = function(p, idx, idx0, idx1) {
+  for (var i = 0; i < idx-1; i++) {
+    if (isIntersect(p[i], p[i+1], p[idx0], p[idx1])) {
+      if (i != idx0 && (i + 1) != idx0) {
+        return true;
+      }
+    }
+  }
+  if (isIntersect(p[idx-1], p[0], p[idx0], p[idx1])) {
+    if ((idx - 1) != idx0 && 0 != idx0) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+//insert point p[src] after p[dst]
+var insert = function(p, dst, src) {
+  var q = p[src];
+  for (var i = src; i > dst + 1; i--) {
+    p[i] = p[i - 1];
+  }
+  p[dst + 1] = q;
+}
+
+// longest edge in polygon p[0], p[1], ... p[idx-1]
+var longest = function(p, idx) {
+  var k = idx-1;
+  var l = distance(p[0], p[idx-1]);
+  for (i = 0; i < idx - 1; i++) {
+    d = distance(p[i], p[i+1]);
+    if(d > l) {
+      k = i;
+      l = d;
+    }
+  }
+  return k;
+}
+
+var drawConnection = function() {
+  if (data == null) {
+    data = {};
+    data.n = Math.floor(Math.random() * 200) + 10;
+    data.p = [];
+    idx = 2;
+    for (var i = 0; i < data.n; i++) {
+      data.p.push(haltonPoint());
+    }
+  }
+
+  ctx.clearRect(0, 0, 512, 512);
+
+  var found = false;
+  var s = longest(data.p, idx);
+  for (var i = 0; i < idx; i++) {
+    var p0 = s + i;
+    if (p0 >= idx) p0 -= idx;
+    var p1 = p0 + 1 >= idx ? 0 : p0 + 1;
+    for (var j = idx; j < data.n; j++) {
+      if (!intersect(data.p, idx, p0, j) && !intersect(data.p, idx, p1, j)) {
+        found = true;
+        insert(data.p, p0, j);
+        break;
+      }
+    }
+    if (found) break;
+  }
+
+  if (found) {
+    idx++;
+  } else {
+    restart();
+    return;
+  }
+
+  ctx.save();
+  ctx.lineWidth = 3;
+  ctx.lineJoin = 'round';
+  ctx.beginPath();
+  ctx.moveTo(data.p[0].x, data.p[0].y);
+  for (var i = 1; i < idx; i++) {
+    ctx.lineTo(data.p[i].x, data.p[i].y);
+  }
+  ctx.lineTo(data.p[0].x, data.p[0].y);
+  ctx.stroke();
+  ctx.restore();
+}
+
+var drawConnection2 = function() {
+  if (data == null) {
+    data = {};
+    data.n = Math.floor(Math.random() * 200) + 10;
+    data.p = [];
+    idx = 3;
+    for (var i = 0; i < 3; i++) {
+      data.p.push({'x': Math.random() * 512,
+                   'y': Math.random() * 512});
+    }
+  }
+
+  if (idx == data.n) {
+    restart();
+    return;
+  }
+
+  ctx.clearRect(0, 0, 512, 512);
+
+  var p0 = longest(data.p, idx);
+  var p1 = p0 + 1 >= idx ? 0 : p0 + 1;
+  var d = distance(data.p[p0], data.p[p1]);
+  while(1) {
+    data.p[idx] = randomPoint(data.p[p0], d);
+    if (!intersect(data.p, idx, p0, idx) && !intersect(data.p, idx, p1, idx)) {
+      insert(data.p, p0, idx);
+      idx++;
+      break;
+    }
+  }
+
+
+  ctx.save();
+  ctx.lineWidth = 3;
+  ctx.lineJoin = 'round';
+  ctx.beginPath();
+  ctx.moveTo(data.p[0].x, data.p[0].y);
+  for (var i = 1; i < idx; i++) {
+    ctx.lineTo(data.p[i].x, data.p[i].y);
+  }
+  ctx.lineTo(data.p[0].x, data.p[0].y);
+  ctx.stroke();
+  ctx.restore();
 }
 
 var drawFunction = drawRandom;
