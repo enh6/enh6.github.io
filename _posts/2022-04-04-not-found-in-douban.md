@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-07-29。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-08-02。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -221,6 +221,10 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt26687035/">人选之人—造浪者</a></td>
     </tr><tr>
       <td>2022</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt13616990/">链锯人</a></td>
+    </tr><tr>
+      <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt20234568/">弱小英雄</a></td>
     </tr><tr>
@@ -255,6 +259,10 @@ tags: private
       <td>2017</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt6455986/">幼女战记</a></td>
+    </tr><tr>
+      <td>2016</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt5607616/">Re：从零开始的异世界生活 第一季</a></td>
     </tr><tr>
       <td>2013</td>
       <td>韩国</td>
