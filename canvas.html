@@ -13,6 +13,7 @@ canvas {
   <script type="text/javascript" src="assets/js/paper-core.min.js"></script>
   <script type="text/javascript">
 var is_pause = false;
+var idx = 0;
 
 //Generator function for Halton sequence
 //https://en.wikipedia.org/wiki/Halton_sequence
@@ -43,34 +44,6 @@ var haltonPoint = function() {
   return new Point(x, y);
 }
 
-var fade = function() {
-  var items = project.getItems({class: Path});
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].fillColor) {
-      items[i].fillColor.alpha -= 0.01;
-      if (items[i].fillColor.alpha <= 0) {
-        items[i].remove();
-      }
-    }
-    if (items[i].strokeColor) {
-      items[i].strokeColor.alpha -= 0.01;
-      if (items[i].strokeColor.alpha <= 0) {
-        items[i].remove();
-      }
-    }
-  }
-}
-
-var away = function() {
-  var center = new Point(256, 256);
-  var items = project.getItems({class: Path});
-  for (var i = 0; i < items.length; i++) {
-    var r = items[i].bounds.width;
-    var scale = 1 - r * 0.001;
-    items[i].scale(scale, center);
-  }
-}
-
 var randomPoint = function(p, r) {
   var ret = p.add(Point.random().multiply(new Point(2 * r, 2 * r)).subtract(new Point(r, r)));
   if (ret.x > 512) {
@@ -94,38 +67,83 @@ var angle = function(p1, p2, p3) {
   return p21.getAngle(p23);
 }
 
+var randomWalk = function(x, min, max, d) {
+  if (x > (max - d)) return max - d;
+  if (x < (min + d)) return min + d;
+  return Math.random() > 0.5 ? x - d : x + d;
+}
+
+var randomWalk2D = function(p, min, max, d) {
+  if (Math.random() > 0.5) {
+    var x = randomWalk(p.x, min.x, max.x, d);
+    return new Point(x, p.y);
+  } else {
+    var y = randomWalk(p.y, min.y, max.y, d);
+    return new Point(p.x, y);
+  }
+}
+
+var fade = function(r) {
+  var items = project.activeLayer.getItems({class: Path});
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].fillColor) {
+      items[i].fillColor.alpha -= r;
+      if (items[i].fillColor.alpha <= 0) {
+        items[i].remove();
+      }
+    }
+    if (items[i].strokeColor) {
+      items[i].strokeColor.alpha -= r;
+      if (items[i].strokeColor.alpha <= 0) {
+        items[i].remove();
+      }
+    }
+  }
+}
+
+var away = function() {
+  var center = new Point(256, 256);
+  var items = project.activeLayer.getItems({class: Path});
+  for (var i = 0; i < items.length; i++) {
+    var r = items[i].bounds.width;
+    var scale = 1 - r * 0.001;
+    items[i].scale(scale, center);
+  }
+}
+
 var drawRandom = function() {
   var path = new Path.Circle(Point.random().multiply(new Point(512, 512)), 2);
-  path.fillColor = Color(0, 1);
+  path.fillColor = new Color(0, 1);
 }
 
 var drawRandom2 = function() {
-  fade();
+  var path = new Path.Circle(Point.random().multiply(new Point(512, 512)), Math.random() * 20);
+  path.fillColor = new Color(0, 1);
+
+  fade(0.01);
   away();
+
   var center = new Point(256, 256);
-  //project.activeLayer.rotate(0.5, center);
-  var items = project.getItems({class: Path});
+  var items = project.activeLayer.getItems({class: Path});
   for (var i = 0; i < items.length; i++) {
     var p = items[i].position;
     var d = p.subtract(center).length;
     items[i].rotate(d * 0.005, center);
   }
-  var path = new Path.Circle(Point.random().multiply(new Point(512, 512)), Math.random() * 20);
-  path.fillColor = Color(0, 1);
 }
 
-var drawRandom3 = function() {
-  //fade();
-  
-  if (!project.activeLayer.children['path']) {
+var drawRandom3 = function(event) {
+  if (!project.activeLayer.my_path) {
     var path = new Path();
-    path.name = 'path';
-    path.strokeColor = Color(0, 1);
+    path.strokeColor = new Color(0, 1);
     path.strokeWidth = 3;
     path.add(Point.random().multiply(new Point(512, 512)));
+    project.activeLayer.my_path = path;
   }
+
+  if (event.count % 3 != 0) return;
   
-  var path = project.activeLayer.children['path'];
+  var path = project.activeLayer.my_path;
   path.add(randomPoint(path.lastSegment.point, 200));
   if (path.segments.length > 50) {
     path.removeSegment(0);
@@ -135,23 +153,25 @@ var drawRandom3 = function() {
 
 var drawHalton = function() {
   var path = new Path.Circle(haltonPoint().multiply(new Point(512, 512)), 2);
-  path.fillColor = Color(0, 1);
+  path.fillColor = new Color(0, 1);
 }
 
-var drawConnection = function() {
-  if (!project.activeLayer.children['path']) {
+var drawConnection = function(event) {
+  if (!project.activeLayer.my_path) {
     var path = new Path();
-    path.name = 'path';
-    path.strokeColor = Color(0, 1);
+    path.strokeColor = new Color(0, 1);
     path.strokeWidth = 3;
     path.strokeJoin = 'round';
     path.add(Point.random().multiply(new Point(512, 512)));
     path.add(Point.random().multiply(new Point(512, 512)));
     path.add(Point.random().multiply(new Point(512, 512)));
     path.closed = true;
+    project.activeLayer.my_path = path;
   }
-  var path = project.activeLayer.children['path'];
 
+  if (event.count % 2 != 0) return;
+
+  var path = project.activeLayer.my_path;
   while (1) {
     var idx = Math.floor(Math.random() * path.curves.length);
     var curve = path.curves[idx];
@@ -183,17 +203,61 @@ var drawConnection = function() {
   }
 }
 
-var pause = function() {
-  is_pause = true;
+var drawGrid = function() {
+  if (project.activeLayer.isEmpty()) {
+    for (var i = 2; i < 512; i += 16) {
+      for (var j = 2; j < 512; j += 16) {
+        var rect = new Rectangle(new Point(i, j), new Size(12, 12));
+        var path = new Path.Rectangle(rect, new Size(3, 3));
+        path.fillColor = new Color(0, 1);
+        path.applyMatrix = false;
+      }
+    }
+  }
+  var items = project.activeLayer.getItems({class: Path});
+  for (var i = 0; i < items.length; i++) {
+    var center = new Point(256, 256);
+    var v = items[i].position.subtract(center);
+    scale = 1 + Math.sin(v.length * 0.04 + v.angleInRadians - idx * 0.06) * 0.25; 
+    items[i].scaling = new Point(scale, scale);
+  }
 }
 
-var resume = function() {
-  is_pause = false;
+var drawRandomWalk = function(event) {
+  if (!project.activeLayer.last_position) {
+    var p = new Point(256, 256);
+    var circle = new Path.Circle(p, 5);
+    circle.fillColor = new Color(255, 0, 0, 1);
+    project.activeLayer.last_position = p;
+    project.activeLayer.last_circle = circle;
+  }
+
+  fade(0.002);
+
+  if (event.count % 2 != 0) return;
+
+  var p = project.activeLayer.last_position;
+  var new_p = randomWalk2D(p, new Point(0, 0), new Point(512, 512), 16);
+  
+  var path = new Path();
+  path.strokeColor = new Color(0, 1);
+  path.strokeWidth = 3;
+  path.add(p, new_p);
+    
+  var circle = new Path.Circle(new_p, 5);
+  circle.fillColor = new Color(255, 0, 0, 1);
+  project.activeLayer.last_circle.fillColor = new Color(0, 1);
+  project.activeLayer.last_circle.scale(0.6);
+
+  project.activeLayer.last_position = new_p;
+  project.activeLayer.last_circle = circle;
 }
 
 var restart = function() {
   project.clear();
+  project.activeLayer;
   is_pause = false;
+  idx = 0;
 }
 
 var run = function(f) {
@@ -203,9 +267,10 @@ var run = function(f) {
 
 var drawFunction = drawRandom;
 
-var drawLoop = function() {
+var drawLoop = function(event) {
   if (!is_pause) {
-    drawFunction();
+    drawFunction(event);
+    idx++;
   }
 }
 
@@ -225,8 +290,6 @@ window.onload = function() {
   </div>
   <div>
     <button onclick="restart()">Restart</button>
-    <button onclick="resume()">Resume</button>
-    <button onclick="pause()">Pause</button>
   </div>
   <div>
     <button onclick="run(drawRandom)">Random</button>
@@ -234,6 +297,8 @@ window.onload = function() {
     <button onclick="run(drawRandom3)">Random3</button>
     <button onclick="run(drawHalton)">Halton</button>
     <button onclick="run(drawConnection)">Connection</button>
+    <button onclick="run(drawGrid)">Grid</button>
+    <button onclick="run(drawRandomWalk)">RandomWalk</button>
   </div>
 </body>
 
