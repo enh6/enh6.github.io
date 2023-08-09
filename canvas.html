@@ -12,7 +12,7 @@ canvas {
   </style>
   <script type="text/javascript" src="assets/js/paper-core.min.js"></script>
   <script type="text/javascript">
-var is_pause = false;
+var pause = false;
 var idx = 0;
 
 //Generator function for Halton sequence
@@ -67,18 +67,18 @@ var angle = function(p1, p2, p3) {
   return p21.getAngle(p23);
 }
 
-var randomWalk = function(x, min, max, d) {
-  if (x > (max - d)) return max - d;
-  if (x < (min + d)) return min + d;
+var randomWalk = function(x, d, min, max) {
+  if (max && x > (max - d)) return max - d;
+  if (min && x < (min + d)) return min + d;
   return Math.random() > 0.5 ? x - d : x + d;
 }
 
-var randomWalk2D = function(p, min, max, d) {
+var randomWalk2D = function(p, d, min, max) {
   if (Math.random() > 0.5) {
-    var x = randomWalk(p.x, min.x, max.x, d);
+    var x = randomWalk(p.x, d, min && min.x, max && max.x);
     return new Point(x, p.y);
   } else {
-    var y = randomWalk(p.y, min.y, max.y, d);
+    var y = randomWalk(p.y, d, min && min.y, max && max.y);
     return new Point(p.x, y);
   }
 }
@@ -109,6 +109,15 @@ var away = function() {
     var scale = 1 - r * 0.001;
     items[i].scale(scale, center);
   }
+}
+
+var shake = function(n, rx = 1, ry = 1, r = 0.005) {
+  var cycle = [1,3,3,1,-1,-3,-3,-1,-1,-2,-1,1,2,1,1,-1];
+  var d = idx % n >= cycle.length ? 0 : cycle[idx % n];
+  var center = new Point(256, 256);
+  project.activeLayer.applyMatrix = false;
+  project.activeLayer.translate(new Point(-d * rx, d * ry));
+  project.activeLayer.scale(1 + d * r, center);
 }
 
 var drawRandom = function() {
@@ -237,7 +246,7 @@ var drawRandomWalk = function(event) {
   if (event.count % 2 != 0) return;
 
   var p = project.activeLayer.last_position;
-  var new_p = randomWalk2D(p, new Point(0, 0), new Point(512, 512), 16);
+  var new_p = randomWalk2D(p, 16, new Point(0, 0), new Point(512, 512));
   
   var path = new Path();
   path.strokeColor = new Color(0, 1);
@@ -253,10 +262,41 @@ var drawRandomWalk = function(event) {
   project.activeLayer.last_circle = circle;
 }
 
+var drawShake = function() {
+  var layer = project.activeLayer;
+  if (layer.isEmpty()) {
+    layer.shake = 60;
+    layer.shaking = false;
+    layer.zoom = 0.001;
+    for (var i = 0; i < 300; i++) {
+      var path = new Path.Star(haltonPoint().multiply(new Point(512, 512)), 14, 12, 8);
+      path.fillColor = new Color(0, 1);
+      path.applyMatrix = false;
+      path.pos = path.position;
+    }
+  }
+  var r = 5;
+  var items = layer.getItems({class: Path});
+  for (var i = 0; i < items.length; i++) {
+    var min = items[i].pos.subtract(new Point(r, r));
+    var max = items[i].pos.add(new Point(r, r));
+    items[i].position = randomWalk2D(items[i].position, 0.5);
+    items[i].rotation = randomWalk(items[i].rotation, 1);
+  }
+  layer.rotation = randomWalk(layer.rotation, 0.1);
+
+  shake(60, 2, 2, 0.005);
+
+  if (idx % 2000 == 1999) {
+    layer.zoom = -layer.zoom;
+  }
+  project.activeLayer.scale(1 + layer.zoom);
+}
+
 var restart = function() {
   project.clear();
   project.activeLayer;
-  is_pause = false;
+  pause = false;
   idx = 0;
 }
 
@@ -268,7 +308,7 @@ var run = function(f) {
 var drawFunction = drawRandom;
 
 var drawLoop = function(event) {
-  if (!is_pause) {
+  if (!pause) {
     drawFunction(event);
     idx++;
   }
@@ -279,7 +319,7 @@ window.onload = function() {
   var canvas = document.querySelector('canvas')
   paper.setup(canvas);
   view.onFrame = drawLoop;
-  view.onClick = () => is_pause = !is_pause;
+  view.onClick = () => pause = !pause;
 }
   </script>
 </head>
@@ -299,6 +339,7 @@ window.onload = function() {
     <button onclick="run(drawConnection)">Connection</button>
     <button onclick="run(drawGrid)">Grid</button>
     <button onclick="run(drawRandomWalk)">RandomWalk</button>
+    <button onclick="run(drawShake)">Shake</button>
   </div>
 </body>
 
