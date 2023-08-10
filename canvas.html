@@ -67,18 +67,18 @@ var angle = function(p1, p2, p3) {
   return p21.getAngle(p23);
 }
 
-var randomWalk = function(x, d, min, max) {
-  if (max && x > (max - d)) return max - d;
-  if (min && x < (min + d)) return min + d;
+var randomWalk = function(x, d, min = -999, max = 999) {
+  if (x > (max - d)) return max - d;
+  if (x < (min + d)) return min + d;
   return Math.random() > 0.5 ? x - d : x + d;
 }
 
-var randomWalk2D = function(p, d, min, max) {
+var randomWalk2D = function(p, d, min = new Point(-999, -999), max = new Point(999, 999)) {
   if (Math.random() > 0.5) {
-    var x = randomWalk(p.x, d, min && min.x, max && max.x);
+    var x = randomWalk(p.x, d, min.x, max.x);
     return new Point(x, p.y);
   } else {
-    var y = randomWalk(p.y, d, min && min.y, max && max.y);
+    var y = randomWalk(p.y, d, min.y, max.y);
     return new Point(p.x, y);
   }
 }
