@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-08-02。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-08-10。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -24,179 +24,238 @@ tags: private
       <td>2022</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt8356942/">355：谍影特攻</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt12663250/">夜叉：浴血谍战</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt18372308/">为人民服务</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2022</td>
       <td>加拿大</td>
       <td><a href="https://www.imdb.com/title/tt10514056/">沉默呼声</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2021</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt15743130/">少年</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2021</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt13872248/">哭悲</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2021</td>
       <td>澳大利亚</td>
       <td><a href="https://www.imdb.com/title/tt15575176/">花果飘零</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2020</td>
       <td>俄罗斯</td>
       <td><a href="https://www.imdb.com/title/tt10796286/">亲爱的同志</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2020</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt6475714/">怪物猎人</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt11810546/">幻爱</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt10805432/">返校</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt8649224/">航母伊吹</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt5865326/">自助洗衣店 </a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2018</td>
       <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt8731042/">自由行</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2018</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt7473032/">中英街1号</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2018</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt6931414/">安市城</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2018</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt7156436/">绝地隧战</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>台湾</td>
+      <td><a href="https://www.imdb.com/title/tt7010366/">自画像</a></td>
+    </tr>
+    <tr>
       <td>2017</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt6493286/">1987：黎明到来的那一天</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2017</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt6878038/">出租车司机</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2017</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt7506740/">挖掘机</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2016</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt5609302/">选老顶</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>香港</td>
+      <td><a href="https://www.imdb.com/title/tt6021632/">风景</a></td>
+    </tr>
+    <tr>
       <td>2015</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt5269560/">十年</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2014</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt2247566/">嘉农</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2014</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt1396523/">青龙复仇</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2014</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt2788710/">刺杀金正恩</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2014</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt3953834/">购物车</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2013</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt3503902/">一个复杂故事</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2012</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt2370792/">一路向西</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2012</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt2308860/">共谋者</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2012</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt2290840/">双面君王</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2011</td>
       <td>法国</td>
       <td><a href="https://www.imdb.com/title/tt1802197/">昂山素季</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2011</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt1832438/">平壤城</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2010</td>
       <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt1723112/">夹边沟</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
+      <td>2010</td>
+      <td>塞尔维亚</td>
+      <td><a href="https://www.imdb.com/title/tt1273235/">一部塞尔维亚电影</a></td>
+    </tr>
+    <tr>
       <td>2008</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt1185594/">神机箭</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2008</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt1133922/">北逃</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2006</td>
       <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt0794374/">颐和园</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2005</td>
       <td>英国</td>
       <td><a href="https://www.imdb.com/title/tt0434409/">V字仇杀队</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2004</td>
       <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt0397229/">20 30 40</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2003</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt0378078/">黄山伐</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2002</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt0373718/">爱情灵药</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2000</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt0216651/">吸血鬼猎人D</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>1997</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt0120102/">西藏七年</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>1997</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt0119485/">达赖的一生</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>1990</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt0100987/">异域</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>1989</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt0103162/">省港旗兵 4：地下通道</a></td>
@@ -219,79 +278,98 @@ tags: private
       <td>2023</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt26687035/">人选之人—造浪者</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2022</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt13616990/">链锯人</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2022</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt20234568/">弱小英雄</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2021</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt15207176/">斯卡罗</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2021</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt14832996/">暴君速成指南</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2020</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt11820476/">国际桥牌社</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2020</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt13175760/">返校</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt11133466/">精神变态日记</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>英国</td>
       <td><a href="https://www.imdb.com/title/tt8694364/">未来岁月</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2019</td>
       <td>英国</td>
       <td><a href="https://www.imdb.com/title/tt7948996/">中美国</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2017</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt6455986/">幼女战记</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2016</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt5607616/">Re：从零开始的异世界生活 第一季</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2013</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt3284102/">总理与我</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2011</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt2165489/">天与地</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2010</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt1813893/">他们在毕业的前一天爆炸</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2010</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt1562754/">坂上之云</a></td>
-    </tr><tr>
-    <td>2008</td>
+    </tr>
+    <tr>
+      <td>2008</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt1158671/">狼与香辛料</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2006</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt0877057/">死亡笔记</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>2001</td>
       <td>韩国</td>
       <td><a href="https://www.imdb.com/title/tt2288116/">明成皇后</a></td>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>1997</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt0121955/">南方公园</a></td>
@@ -406,10 +484,6 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt6090264/">塑料王国</a></td>
     </tr>
     <tr>
-      <td>2016</td>
-      <td><a href="https://www.imdb.com/title/tt6021632/">风景</a></td>
-    </tr>
-    <tr>
       <td>2015</td>
       <td><a href="https://www.imdb.com/title/tt4901304/">悲兮魔兽</a></td>
     </tr>
@@ -503,6 +577,8 @@ tags: private
 
 豆瓣替代网站：
 - [NeoDB](https://about.neodb.social/doc/howto/)
+
+NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/2oJLPv7YN1KoAI0v1ulpDO)
 
 <script src="/assets/js/sortable.js"></script>
 <script>
