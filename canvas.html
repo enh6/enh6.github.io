@@ -360,6 +360,53 @@ var drawMaze = function(event) {
   path.add(p1, p2);
 }
 
+var drawDragon = function(event) {
+  var steps = 50;
+  if (!project.activeLayer.dragon) {
+    project.activeLayer.step = 0;
+    var dragon = new Path();
+    dragon.strokeColor = new Color(0, 1);
+    dragon.strokeWidth = 3;
+    dragon.add(new Point(200, 300));
+    dragon.add(new Point(400, 300));
+    project.activeLayer.dragon = dragon;
+    project.activeLayer.step = steps * 2;
+  }
+
+  var dragon = project.activeLayer.dragon;
+  if (project.activeLayer.step == steps * 2) {
+    var rect = new Rectangle(new Point(0, 0), new Point(512, 512));
+    var n = dragon.segments.length - 1;
+    while (!rect.contains(dragon.segments[n].point)) {
+      n--;
+    }
+    dragon.removeSegments(n+1);
+
+    for (var i = 0; i < dragon.curves.length; i+=2) {
+      dragon.curves[i].divideAtTime(0.5);
+    }
+    project.activeLayer.step = 0;
+  }
+
+  project.activeLayer.step++;
+
+  if (idx > 700) {
+    dragon.scale(1.0035, new Point(200, 300));
+  }
+
+  if (project.activeLayer.step > steps) {
+    return;
+  }
+
+  var angle = -90;
+  for (var i = 1; i < dragon.segments.length-1; i+=2) {
+      var v = dragon.segments[i+1].point.subtract(dragon.segments[i-1].point);
+      v = v.rotate(angle).divide(steps*2);
+      angle = - angle;
+      dragon.segments[i].point = dragon.segments[i].point.add(v);
+  }
+}
+
 var restart = function() {
   project.clear();
   project.activeLayer;
@@ -408,6 +455,7 @@ window.onload = function() {
     <button onclick="run(drawRandomWalk)">RandomWalk</button>
     <button onclick="run(drawShake)">Shake</button>
     <button onclick="run(drawMaze)">Maze</button>
+    <button onclick="run(drawDragon)">Dragon Curve</button>
   </div>
 </body>
 
