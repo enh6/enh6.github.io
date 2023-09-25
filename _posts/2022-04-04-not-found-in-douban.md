@@ -389,6 +389,10 @@ tags: private
   <tbody>
     <tr>
       <td>2023</td>
+      <td><a href="https://www.themoviedb.org/tv/232781">陌生人：对话圣战分子</a></td>
+    </tr>
+    <tr>
+      <td>2023</td>
       <td><a href="https://www.imdb.com/title/tt27148236/">完全信任</a></td>
     </tr>
     <tr>
@@ -405,7 +409,7 @@ tags: private
     </tr>
     <tr>
       <td>2021</td>
-      <td>何以为家：沉默</td>
+      <td><a href="https://www.themoviedb.org/movie/826601">何以为家：沉默</a></td>
     </tr>
     <tr>
       <td>2021</td>
@@ -441,7 +445,7 @@ tags: private
     </tr>
     <tr>
       <td>2017</td>
-      <td>并：控制</td>
+      <td><a href="https://www.themoviedb.org/movie/525757">并：控制</a></td>
     </tr>
     <tr>
       <td>2017</td>
@@ -571,12 +575,12 @@ tags: private
 </table>
 
 其他审查机制：
-- 隐藏条目，只有登录用户能看到，如《天注定》。
-- 条目只有基本信息，不允许评分、短评、影评、讨论，如《大路朝天》。
-- 条目存在，站内搜索不显示结果，如《无依之地》。
+- 隐藏条目，只有登录用户能看到，如[《天注定》](https://movie.douban.com/subject/21941283/)。
+- 条目只有基本信息，不允许评分、短评、影评、讨论，如[《大路朝天》](https://movie.douban.com/subject/26662337/)。
+- 条目存在，站内搜索[不显示结果](https://search.douban.com/movie/subject_search?search_text=%E6%97%A0%E4%BE%9D%E4%B9%8B%E5%9C%B0&cat=1002)，如[《无依之地》](https://movie.douban.com/subject/30458949/)。
 
 豆瓣替代网站：
-- [NeoDB](https://about.neodb.social/doc/howto/)
+- [NeoDB](https://neodb.social/)
 
 NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/2oJLPv7YN1KoAI0v1ulpDO)
 
