@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-09-25。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-10-07。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -39,6 +39,11 @@ tags: private
       <td>2022</td>
       <td>加拿大</td>
       <td><a href="https://www.imdb.com/title/tt10514056/">沉默呼声</a></td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>香港</td>
+      <td><a href="https://www.imdb.com/title/tt13887128/">浊水漂流</a></td>
     </tr>
     <tr>
       <td>2021</td>
@@ -345,6 +350,11 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt2165489/">天与地</a></td>
     </tr>
     <tr>
+      <td>2011</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E5%BB%A3%E9%96%8B%E5%9C%9F%E5%A4%AA%E7%8E%8B_(%E9%9B%BB%E8%A6%96%E5%8A%87)">广开土太王</a></td>
+    </tr>
+    <tr>
       <td>2010</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt1813893/">他们在毕业的前一天爆炸</a></td>
@@ -360,14 +370,49 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt1158671/">狼与香辛料</a></td>
     </tr>
     <tr>
+      <td>2007</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E5%A4%AA%E7%8E%8B%E5%9B%9B%E7%A5%9E%E8%A8%98">太王四神记</a></td>
+    </tr>
+    <tr>
       <td>2006</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt0877057/">死亡笔记</a></td>
     </tr>
     <tr>
+      <td>2006</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E6%9C%B1%E8%92%99_(%E9%9B%BB%E8%A6%96%E5%8A%87)">朱蒙</a></td>
+    </tr>
+    <tr>
+      <td>2006</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E5%A4%A7%E7%A5%9A%E6%A6%AE_(%E9%9B%BB%E8%A6%96%E5%8A%87)">大祚荣</a></td>
+    </tr>
+    <tr>
+      <td>2006</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E6%B8%8A%E7%9B%96%E8%8B%8F%E6%96%87_(%E7%94%B5%E8%A7%86%E5%89%A7)">渊盖苏文</a></td>
+    </tr>
+    <tr>
+      <td>2005</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E8%96%AF%E7%AB%A5%E8%AC%A0_(%E9%9B%BB%E8%A6%96%E5%8A%87)">薯童谣</a></td>
+    </tr>
+    <tr>
+      <td>2004</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E4%B8%8D%E6%BB%85%E7%9A%84%E6%9D%8E%E8%88%9C%E8%87%A3">不灭的李舜臣</a></td>
+    </tr>
+    <tr>
+      <td>2002</td>
+      <td>韩国</td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E5%B8%9D%E5%9C%8B%E7%9A%84%E6%97%A9%E6%99%A8">帝国的早晨</a></td>
+    </tr>
+    <tr>
       <td>2001</td>
       <td>韩国</td>
-      <td><a href="https://www.imdb.com/title/tt2288116/">明成皇后</a></td>
+      <td><a href="https://zh.wikipedia.org/zh-cn/%E6%98%8E%E6%88%90%E7%9A%87%E5%90%8E_(%E9%9B%BB%E8%A6%96%E5%8A%87)">明成皇后</a></td>
     </tr>
     <tr>
       <td>1997</td>
