@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-10-07。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-10-27。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -88,7 +88,12 @@ tags: private
     <tr>
       <td>2019</td>
       <td>美国</td>
-      <td><a href="https://www.imdb.com/title/tt5865326/">自助洗衣店 </a></td>
+      <td><a href="https://www.imdb.com/title/tt5865326/">自助洗衣店</a></td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>美国</td>
+      <td><a href="https://www.imdb.com/title/tt7826276/">网诱惊魂</a></td>
     </tr>
     <tr>
       <td>2018</td>
