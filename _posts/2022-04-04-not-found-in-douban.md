@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-10-27。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-11-03。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -343,6 +343,11 @@ tags: private
       <td>2016</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt5607616/">Re：从零开始的异世界生活 第一季</a></td>
+    </tr>
+    <tr>
+      <td>2014</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt3645092/">马赛克日本</a></td>
     </tr>
     <tr>
       <td>2013</td>
