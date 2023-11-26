@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-11-03。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2023-11-26。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -292,7 +292,7 @@ tags: private
     <tr>
       <td>2022</td>
       <td>日本</td>
-      <td><a href="https://www.imdb.com/title/tt13616990/">链锯人</a></td>
+      <td><a href="https://www.imdb.com/title/tt13616990/">链锯人(电锯人)</a></td>
     </tr>
     <tr>
       <td>2022</td>
@@ -370,6 +370,11 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt1813893/">他们在毕业的前一天爆炸</a></td>
     </tr>
     <tr>
+      <td>2011</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt1890725/">BLOOD-C</a></td>
+    </tr>
+    <tr>
       <td>2010</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt1562754/">坂上之云</a></td>
@@ -442,6 +447,10 @@ tags: private
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>2023</td>
+      <td><a href="https://www.imdb.com/title/tt24082438/">马里乌波尔的20天</a></td>
+    </tr>
     <tr>
       <td>2023</td>
       <td><a href="https://www.themoviedb.org/tv/232781">陌生人：对话圣战分子</a></td>
