@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2023-11-28。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2024-01-12。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -49,6 +49,11 @@ tags: private
       <td>2021</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt13887128/">浊水漂流</a></td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>香港</td>
+      <td><a href="https://www.imdb.com/title/tt14685224/">日常</a></td>
     </tr>
     <tr>
       <td>2021</td>
@@ -385,6 +390,11 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt1562754/">坂上之云</a></td>
     </tr>
     <tr>
+      <td>2010</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt1685401/">学园默示录</a></td>
+    </tr>
+    <tr>
       <td>2008</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt1158671/">狼与香辛料</a></td>
@@ -577,6 +587,10 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt4805912/">太阳，不远</a></td>
     </tr>
     <tr>
+      <td>2013</td>
+      <td><a href="https://www.imdb.com/title/tt4141314/">星火</a></td>
+    </tr>
+    <tr>
       <td>2012</td>
       <td><a href="https://www.imdb.com/title/tt1980046/">垃圾围城</a></td>
     </tr>
@@ -622,6 +636,10 @@ tags: private
     </tr>
     <tr>
       <td>2007</td>
+      <td><a href="https://www.imdb.com/title/tt30414440/">中原纪事</a></td>
+    </tr>
+    <tr>
+      <td>2007</td>
       <td><a href="https://www.imdb.com/title/tt1114277/">沿江而上</a></td>
     </tr>
     <tr>
@@ -651,7 +669,7 @@ tags: private
 豆瓣替代网站：
 - [NeoDB](https://neodb.social/)
 
-NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/2oJLPv7YN1KoAI0v1ulpDO)
+NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/3ezQoQbGx4qKxDFT5mkj1n)
 
 <script src="/assets/js/sortable.js"></script>
 <script>
