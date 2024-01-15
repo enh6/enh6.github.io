@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Emoji Game</title>
+  <style>
+#game {
+  padding: 5px;
+  font-size: 20px;
+  font-family: monospace;
+  border: 1px solid;
+  line-height: 25px;
+  width: 500px;
+}
+
+#game span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: end;
+  vertical-align: middle;
+  letter-spacing: 1px;
+}
+  </style>
+
+</head>
+
+<body>
+  <h1>Emoji Game</h1>
+  <div id="game"></div>
+  <script>
+var draw = function() {
+  if (s.length != 400) {
+    console.log(s.length);
+    return;
+  }
+  const texts = s.map(x => `<span>${x}</span>`);
+  document.getElementById("game").innerHTML = texts.join("");
+}
+
+var s = new Array(400);
+
+var randomSmileys = function() {
+  var smileys = ["😀", "😃", "😄", "😁", "😆", "😅", "🙂", "😐", "🙁"];
+  for (var i = 0; i < 400; i++) {
+    s[i] = smileys[Math.floor(Math.random() * 1000) % 9];
+  }
+}
+
+var idx = 0;
+var update = function() {
+  if (idx % 20 == 0) {
+    randomSmileys();
+  }
+  idx++;
+}
+
+var gameLoop = function(event) {
+  //handleInput();
+  update();
+  draw();
+  window.requestAnimationFrame(gameLoop);
+}
+
+window.onload = function() {
+  window.requestAnimationFrame(gameLoop);
+}
+
+  </script>
+
+</body>
+
+</html>
