@@ -9,13 +9,12 @@
   padding: 5px;
   font-size: 20px;
   font-family: monospace;
-
   line-height: 25px;
   width: 500px;
   cursor: default;
   user-select: none;
   //resize: both;
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 #game span, #draw span {
@@ -25,6 +24,7 @@
   text-align: end;
   vertical-align: middle;
   letter-spacing: 1px;
+  overflow: hidden;
 }
 
 #game {
@@ -47,15 +47,27 @@
   </div>
   <script>
 var game = document.getElementById("game");
-var spans = game.getElementsByTagName("span");
 var draw = function() {
   if (s.length != 400) {
     console.log(s.length);
     return;
   }
+  
+  var spans = game.getElementsByTagName("span");
   for (var i = 0; i < 400; i++) {
-    spans[i].innerText = s[i];
+    if (spans[i].textContent !== s[i]) {
+      spans[i].textContent = s[i];
+    }
   }
+}
+
+var game_status = {
+  status: "start",
+  hero_position: {x: 10, y: 10},
+};
+
+var setEmoji = function(emoji, pos) {
+  s[pos.y * 20 + pos.x] = emoji;
 }
 
 var s = new Array(400);
@@ -73,29 +85,108 @@ var title = function() {
 var idx = 0;
 var update = function() {
   if (idx % 20 == 0) {
-    randomSmileys();
+    if (game_status.status === "start") {
+      randomSmileys();
+    } else if (game_status.status === "play") {
+      
+    }
   }
   title();
-  idx++;
+}
+
+var levels = { 
+test: [
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+"⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜","⬜",
+],
+};
+
+
+var setLevel = function(l) {
+  for (var i = 0; i < 400; i++) {
+    s[i] = levels[l][i];
+  }
+  setEmoji("😀", game_status.hero_position);
+}
+
+var handleUp = function() {
+  console.log("up");
+}
+
+var handleDown = function() {
+  console.log("down");
+}
+
+var handleLeft = function() {
+  console.log("left");
+}
+
+var handleRight = function() {
+  console.log("right");
+}
+
+var handleInput = function() {
+  if (idx % 10 == 0 && current_key) {
+    if (game_status.status === "start") {
+      game_status.status = "play";
+      setLevel("test");
+    } else if (game_status.status === "play") {
+      if (current_key === "ArrowUp") {
+        handleUp();
+      } else if (current_key === "ArrowDown") {
+        handleDown();
+      } else if (current_key === "ArrowLeft") {
+        handleLeft();
+      } else if (current_key === "ArrowRight") {
+        handleRight();
+      }
+    }
+    current_key = "";
+  }
 }
 
 var gameLoop = function(event) {
-  //handleInput();
+  handleInput();
   update();
   draw();
   window.requestAnimationFrame(gameLoop);
+  idx++;
 }
 
 var handleDraw = function(event) {
   if (event.target.tagName === "SPAN") {
-    event.target.innerText = document.getElementById("current").innerText;
+    event.target.textContent = document.getElementById("current").textContent;
   }
 }
 
 var handleSelect = function(event) {
   if (event.target.tagName === "SPAN") {
-    document.getElementById("current").innerText = event.target.innerText;
+    document.getElementById("current").textContent = event.target.textContent;
   }
+}
+
+var current_key = "";
+
+var handleKey = function(event) {
+  current_key = event.key;
 }
 
 var emojis = ["", "😀", "😃", "😄", "😁", "😆", "😅", "🙂", "😐", "🙁",
@@ -105,11 +196,29 @@ var emojis = ["", "😀", "😃", "😄", "😁", "😆", "😅", "🙂", "😐"
 "0️⃣", "1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣", "7️⃣","8️⃣","9️⃣",
 ];
 
+var initGame = function() {
+  document.addEventListener("keydown", handleKey);
+}
+
 var initDraw = function() {
   game.addEventListener("click", handleDraw);
   document.getElementById("draw").classList.remove("hidden");
   document.getElementById("select").addEventListener("click", handleSelect);
   document.getElementById("select").innerHTML = emojis.map(x => `<span>${x}</span>`).join("");
+}
+
+var dumpCanvas = function() {
+  var s = [];
+  var spans = game.getElementsByTagName("span");
+  for (var i = 0; i < 400; i++) {
+    s.push(spans[i].textContent);
+  }
+  var level = "[\n";
+  for (var i = 0; i < 20; i++) {
+    level += s.slice(i * 20, i * 20 + 20).map(x => `"${x}",`).join("") + "\n";
+  }
+  level += "]\n";
+  console.log(level);
 }
 
 window.onload = function() {
@@ -119,6 +228,7 @@ window.onload = function() {
     game.innerHTML = "<span>⬜</span>".repeat(400);
     initDraw();
   } else {
+    initGame();
     window.requestAnimationFrame(gameLoop);
   }
 }
