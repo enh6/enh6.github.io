@@ -6,6 +6,7 @@
   <title>Emoji Game</title>
   <style>
 #game, #draw {
+  margin: auto;
   padding: 5px;
   font-size: 20px;
   font-family: monospace;
@@ -21,13 +22,15 @@
   display: inline-block;
   width: 25px;
   height: 25px;
-  text-align: end;
+  //text-align: end;
   vertical-align: middle;
   letter-spacing: 1px;
   overflow: hidden;
+  white-space: pre;
 }
 
 #game {
+  margin-top: 50px;
   border: 1px solid;
 }
 
@@ -39,7 +42,6 @@
 </head>
 
 <body>
-  <h1>Emoji Game</h1>
   <div id="game"></div>
   <div id="draw" class="hidden">
     <div>Selected emoji: <span id="current">😀</span></div>
@@ -48,15 +50,14 @@
   <script>
 var game = document.getElementById("game");
 var draw = function() {
-  if (s.length != 400) {
-    console.log(s.length);
-    return;
-  }
-  
   var spans = game.getElementsByTagName("span");
   for (var i = 0; i < 400; i++) {
-    if (spans[i].textContent !== s[i]) {
-      spans[i].textContent = s[i];
+    var buf = game_status.canvas[i];
+    if (game_status.ui && game_status.ui[i]) {
+      buf = game_status.ui[i];
+    }
+    if (spans[i].textContent !== buf) {
+      spans[i].textContent = buf;
     }
   }
 }
@@ -64,6 +65,11 @@ var draw = function() {
 var game_status = {
   status: "start",
   hero_position: 0,
+  ui: null,
+  canvas: null,
+  current_key: "",
+  current_level: "",
+  reset_ui_by_input: false,
 };
 
 var setEmoji = function(emoji, pos) {
@@ -71,25 +77,27 @@ var setEmoji = function(emoji, pos) {
   if (idx < 0 || idx >= 400) {
     return;
   }
-  s[idx] = emoji;
+  game_status.canvas[idx] = emoji;
 }
 
-var s = new Array(400);
+var setUILetter = function(l, pos) {
+  var idx = pos.y * 20 + pos.x;
+  if (idx < 0 || idx >= 400) {
+    return;
+  }
+  game_status.ui[idx] = l;
+}
+
 var randomSmileys = function() {
   var smileys = ["😀", "😃", "😄", "😁", "😆", "😅", "🙂", "😐", "🙁"];
   for (var i = 0; i < 400; i++) {
-    s[i] = smileys[Math.floor(Math.random() * 1000) % 9];
+    game_status.canvas[i] = smileys[Math.floor(Math.random() * 1000) % 9];
   }
 }
 
 var TODO = [
-"display text",
 "hero emoji animation"
 ];
-
-var title = function() {
-
-}
 
 var levels = { 
 test: [
@@ -121,7 +129,6 @@ var update = function() {
   if (game_status.status === "start") {
     if (idx % 20 == 0) {
       randomSmileys();
-      title();
     }
   } else if (game_status.status === "animation") {
     if (idx % 2 == 0) {
@@ -148,12 +155,13 @@ var update = function() {
 
 var setLevel = function(l) {
   for (var i = 0; i < 400; i++) {
-    s[i] = levels[l][i];
-    if (s[i] === "😀") {
+    game_status.canvas[i] = levels[l][i];
+    if (game_status.canvas[i] === "😀") {
       game_status.hero_position = i;
     }
   }
   game_status.status = "play";
+  game_status.current_level = l;
 }
 
 var setAnimation = function(to, callback) {
@@ -168,62 +176,67 @@ var setAnimation = function(to, callback) {
 
 var handleUp = function() {
   p = game_status.hero_position;
-  if (p > 19 && s[p-20] == '') {
+  if (p > 19 && game_status.canvas[p-20] == '') {
     game_status.hero_position = p - 20;
-    s[p-20] = "😀";
-    s[p] = '';
+    game_status.canvas[p-20] = "😀";
+    game_status.canvas[p] = '';
   }
 }
 
 var handleDown = function() {
   p = game_status.hero_position;
-  if (p < 380 && s[p+20] == '') {
+  if (p < 380 && game_status.canvas[p+20] == '') {
     game_status.hero_position = p + 20;
-    s[p+20] = "😀";
-    s[p] = '';
+    game_status.canvas[p+20] = "😀";
+    game_status.canvas[p] = '';
   }
 }
 
 var handleLeft = function() {
   p = game_status.hero_position;
-  if (p % 20 !== 0 && s[p-1] == '') {
+  if (p % 20 !== 0 && game_status.canvas[p-1] == '') {
     game_status.hero_position = p - 1;
-    s[p-1] = "😀";
-    s[p] = '';
+    game_status.canvas[p-1] = "😀";
+    game_status.canvas[p] = '';
   }
 }
 
 var handleRight = function() {
   p = game_status.hero_position;
-  if (p % 20 !== 19 && s[p+1] == '') {
+  if (p % 20 !== 19 && game_status.canvas[p+1] == '') {
     game_status.hero_position = p + 1;
-    s[p+1] = "😀";
-    s[p] = '';
+    game_status.canvas[p+1] = "😀";
+    game_status.canvas[p] = '';
   }
 }
 
 var handleInput = function() {
-  if (idx % 5 == 0 && current_key) {
+  if (idx % 5 == 0 && game_status.current_key) {
     if (game_status.status === "start") {
-      game_status.status = "play";
+      resetUI();
       setAnimation(levels["test"], () => {
-        console.log("play callback");
         setLevel("test");
+        setUI(["Level 1"], true);
       });
     } else if (game_status.status === "animation") {
       return;
     } else if (game_status.status === "play") {
-      if (current_key === "ArrowUp") {
+      if (game_status.current_key === "ArrowUp") {
         handleUp();
-      } else if (current_key === "ArrowDown") {
+      } else if (game_status.current_key === "ArrowDown") {
         handleDown();
-      } else if (current_key === "ArrowLeft") {
+      } else if (game_status.current_key === "ArrowLeft") {
         handleLeft();
-      } else if (current_key === "ArrowRight") {
+      } else if (game_status.current_key === "ArrowRight") {
         handleRight();
       }
     }
-    current_key = "";
+
+    if (game_status.reset_ui_by_input) {
+      resetUI();
+    }
+
+    game_status.current_key = "";
   }
 }
 
@@ -247,24 +260,55 @@ var handleSelect = function(event) {
   }
 }
 
-var current_key = "";
-
 var handleKey = function(event) {
-  current_key = event.key;
+  if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+    game_status.current_key = event.key;
+  }
 }
 
-var emojis = ["", "😀", "😃", "😄", "😁", "😆", "😅", "🙂", "😐", "🙁",
-"😈", "👿", "💀", "💩", "🤡", "👹", "👻", "👽",
-"🟥", "🟧", "🟨", "🟩", "🟦", "🟪", "🟫", "⬛", "⬜",
-"💰", "❤️", "💎", "💬", "⭐",
-"0️⃣", "1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣", "7️⃣","8️⃣","9️⃣",
+var emojis = ["","😀","😃","😄","😁","😆","😅","🙂","😐","🙁","🤯",
+"😈","👿","💀","💩","🤡","👹","👻","👽",
+"🟥","🟧","🟨","🟩","🟦","🟪","🟫","⬛", "⬜",
+"⛔","🚪","🌳",
+"💰","❤️","💎","💬","⭐","🎁","📦","💣","🔥","💥","🕯️",
 ];
+
+var setUI = function(lines, reset_ui_by_input) {
+  game_status.ui = new Array(400);
+  var row = 6;
+  var w = 0;
+  for (var i = 0; i < lines.length; i++) {
+    var l = lines[i].length;
+    if (l > w) {
+      w = l;
+    }
+    var col = Math.floor((20 - l/2) / 2);
+    for (var j = 0; j < l; j += 2) {
+      setUILetter(lines[i].substr(j, 2), {x: col, y: row});
+      col++;
+    }
+    row++;
+  }
+  if (reset_ui_by_input) {
+    game_status.reset_ui_by_input = reset_ui_by_input;
+  }
+}
+
+var resetUI = function() {
+  game_status.ui = null;
+}
 
 var initGame = function() {
   document.addEventListener("keydown", handleKey);
+  setUI(["   E M O J I   G A M E   ",
+   "","","",
+   " Use ↑ ↓ ← → to play..",
+  ]);
+  window.requestAnimationFrame(gameLoop);
 }
 
 var initDraw = function() {
+  game.innerHTML = "<span>⬜</span>".repeat(400);
   game.addEventListener("click", handleDraw);
   document.getElementById("draw").classList.remove("hidden");
   document.getElementById("select").addEventListener("click", handleSelect);
@@ -286,14 +330,13 @@ var dumpCanvas = function() {
 }
 
 window.onload = function() {
+  game_status.canvas = new Array(400);
   game.innerHTML = "<span></span>".repeat(400);
   var canvasDraw = window.location.hash === "#draw";
   if (canvasDraw) {
-    game.innerHTML = "<span>⬜</span>".repeat(400);
     initDraw();
   } else {
     initGame();
-    window.requestAnimationFrame(gameLoop);
   }
 }
 
