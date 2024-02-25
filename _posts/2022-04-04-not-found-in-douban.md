@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2024-02-07。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2024-02-025。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -20,6 +20,11 @@ tags: private
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>2024</td>
+      <td>中国</td>
+      <td><a href="https://www.imdb.com/title/tt17347524/">沃土</a></td>
+    </tr>
     <tr>
       <td>2022</td>
       <td>中国</td>
@@ -408,6 +413,11 @@ tags: private
       <td>2007</td>
       <td>韩国</td>
       <td><a href="https://zh.wikipedia.org/zh-cn/%E5%A4%AA%E7%8E%8B%E5%9B%9B%E7%A5%9E%E8%A8%98">太王四神记</a></td>
+    </tr>
+    <tr>
+      <td>2007</td>
+      <td>韩国</td>
+      <td><a href="https://www.imdb.com/title/tt1672137/">空港城市</a></td>
     </tr>
     <tr>
       <td>2006</td>
