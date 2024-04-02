@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2024-02-25。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2024-04-02。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -20,11 +20,6 @@ tags: private
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>2024</td>
-      <td>中国</td>
-      <td><a href="https://www.imdb.com/title/tt17347524/">沃土</a></td>
-    </tr>
     <tr>
       <td>2022</td>
       <td>中国</td>
