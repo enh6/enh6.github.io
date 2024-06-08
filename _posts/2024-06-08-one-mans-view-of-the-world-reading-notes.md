@@ -6,7 +6,7 @@ categories: blog
 tags: note
 ---
 
-- One Man's View of the World
+- _One Man's View of the World_
 - Lee Kuan Yew
 - Straits Times Press 2017
 
