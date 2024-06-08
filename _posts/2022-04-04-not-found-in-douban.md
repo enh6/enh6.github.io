@@ -684,6 +684,7 @@ tags: private
 其他审查机制：
 - 隐藏条目，只有登录用户能看到，如[《天注定》](https://movie.douban.com/subject/21941283/)。
 - 条目只有基本信息，不允许评分、短评、影评、讨论，如[《大路朝天》](https://movie.douban.com/subject/26662337/)。
+- 条目删除后恢复为隐藏条目，只有登录用户能看到，只有基本信息和几条固定短评，如[《沃土》](https://movie.douban.com/subject/34970333/)。
 - 条目存在，站内搜索[不显示结果](https://search.douban.com/movie/subject_search?search_text=%E6%97%A0%E4%BE%9D%E4%B9%8B%E5%9C%B0&cat=1002)，如[《无依之地》](https://movie.douban.com/subject/30458949/)。
 
 豆瓣替代网站：
