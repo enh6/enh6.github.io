@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2024-06-08。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2024-07-25。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -365,6 +365,11 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt6455986/">幼女战记</a></td>
     </tr>
     <tr>
+      <td>2017</td>
+      <td>美国</td>
+      <td><a href="https://www.imdb.com/title/tt5853176/">傲骨之战 第三季 第六季</a></td>
+    </tr>
+    <tr>
       <td>2016</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt5607616/">Re：从零开始的异世界生活 第一季</a></td>
@@ -484,6 +489,10 @@ tags: private
   <tbody>
     <tr>
       <td>2023</td>
+      <td><a href="https://www.imdb.com/title/tt8469104/">青春</a></td>
+    </tr>
+    <tr>
+      <td>2023</td>
       <td><a href="https://www.imdb.com/title/tt24082438/">马里乌波尔的20天</a></td>
     </tr>
     <tr>
@@ -540,7 +549,15 @@ tags: private
     </tr>
     <tr>
       <td>2018</td>
+      <td><a href="https://www.imdb.com/title/tt8296608/">死灵魂</a></td>
+    </tr>
+    <tr>
+      <td>2018</td>
       <td><a href="https://www.imdb.com/title/tt8711506/">我们的青春，在台湾</a></td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td><a href="https://www.imdb.com/title/tt7155262/">方绣英</a></td>
     </tr>
     <tr>
       <td>2017</td>
@@ -569,6 +586,14 @@ tags: private
     <tr>
       <td>2017</td>
       <td><a href="https://www.imdb.com/title/tt6433144/">凶年之畔</a></td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td><a href="https://www.imdb.com/title/tt6028412/">苦钱</a></td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td><a href="https://www.imdb.com/title/tt5474508/">德昂</a></td>
     </tr>
     <tr>
       <td>2016</td>
@@ -608,7 +633,15 @@ tags: private
     </tr>
     <tr>
       <td>2013</td>
+      <td><a href="https://www.imdb.com/title/tt3120794/">疯爱</a></td>
+    </tr>
+    <tr>
+      <td>2013</td>
       <td><a href="https://www.imdb.com/title/tt4141314/">星火</a></td>
+    </tr>
+    <tr>
+      <td>2012</td>
+      <td><a href="https://www.imdb.com/title/tt2361042/">三姊妹</a></td>
     </tr>
     <tr>
       <td>2012</td>
@@ -677,6 +710,10 @@ tags: private
     <tr>
       <td>2003</td>
       <td><a href="https://www.imdb.com/title/tt0381430/">八九点钟的太阳</a></td>
+    </tr>
+    <tr>
+      <td>2003</td>
+      <td><a href="https://www.imdb.com/title/tt0389448/">铁西区</a></td>
     </tr>
   </tbody>
 </table>
