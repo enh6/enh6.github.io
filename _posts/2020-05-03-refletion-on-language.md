@@ -31,6 +31,7 @@ tags: private
 - [《中文解毒 從混帳文字到通順中文》](https://book.douban.com/subject/3322406/)
 - [慕容雪村：中国语言风格的堕落](https://cn.nytimes.com/opinion/20150528/c28murong/)
 - [张维迎：警惕语言腐败](https://www.youtube.com/watch?v=G_eHivAe9jk)
+- [Proper Chinese Movement](https://paulhan.co/journal/67c1hecc2gcqq1neuajgqe8dbscot4)
 - [怎样改进英式中文？ 论中文的常态与变态](https://github.com/leancloud/open-old/blob/master/_app/_posts/note/2014-07-17-improve-chinese.md)
 - [George Orwell: Politics and the English Language](https://www.orwell.ru/library/essays/politics/english/e_polit/)
 - [黄章晋：没有母语的人民](https://chinadigitaltimes.net/chinese/178869.html)
