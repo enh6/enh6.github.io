@@ -341,6 +341,11 @@ tags: private
     </tr>
     <tr>
       <td>2024</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt28534254/">狼与香辛料 行商邂逅贤狼</a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt8773420/">外籍之人</a></td>
     </tr>
@@ -448,11 +453,6 @@ tags: private
       <td>2010</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt1685401/">学园默示录</a></td>
-    </tr>
-    <tr>
-      <td>2008</td>
-      <td>日本</td>
-      <td><a href="https://www.imdb.com/title/tt1158671/">狼与香辛料</a></td>
     </tr>
     <tr>
       <td>2007</td>
