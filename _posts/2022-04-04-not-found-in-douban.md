@@ -7,7 +7,7 @@ description: 一些豆瓣上没有条目的影视作品，持续更新中，感�
 tags: private
 ---
 
-持续更新中，最后更新时间：2024-07-25。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
+持续更新中，最后更新时间：2024-10-24。感谢热心网友的补充。欢迎来信交流：`enh6 AT hutrua.com`。
 
 ## 电影
 
@@ -24,6 +24,26 @@ tags: private
       <td>未上映</td>
       <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt29580232/">援军明日到达</a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>中国</td>
+      <td><a href="https://www.themoviedb.org/movie/1081918">空房间里的女人</a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>中国</td>
+      <td><a href="https://www.themoviedb.org/movie/1370223">漂亮朋友</a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>中国</td>
+      <td><a href="https://www.themoviedb.org/movie/945170">沃土</a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>中国</td>
+      <td><a href="https://www.themoviedb.org/movie/1364070">三个羯子</a></td>
     </tr>
     <tr>
       <td>2024</td>
@@ -212,6 +232,11 @@ tags: private
     </tr>
     <tr>
       <td>2011</td>
+      <td>中国</td>
+      <td><a href="https://www.imdb.com/title/tt2089720/">老狗</a></td>
+    </tr>
+    <tr>
+      <td>2011</td>
       <td>法国</td>
       <td><a href="https://www.imdb.com/title/tt1802197/">昂山素季</a></td>
     </tr>
@@ -271,6 +296,11 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt0216651/">吸血鬼猎人D</a></td>
     </tr>
     <tr>
+      <td>1999</td>
+      <td>不丹</td>
+      <td><a href="https://www.imdb.com/title/tt0201840/">高山上的世界杯</a></td>
+    </tr>
+    <tr>
       <td>1997</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt0120102/">西藏七年</a></td>
@@ -304,6 +334,11 @@ tags: private
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>未播出</td>
+      <td>台湾</td>
+      <td><a href="https://www.imdb.com/title/tt26687035/">零日攻击</a></td>
+    </tr>
     <tr>
       <td>2024</td>
       <td>美国</td>
@@ -488,8 +523,16 @@ tags: private
   </thead>
   <tbody>
     <tr>
+      <td>2024</td>
+      <td><a href="https://www.imdb.com/title/tt33029375/">青春：归 </a></td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td><a href="https://www.imdb.com/title/tt33029373/">青春：苦 </a></td>
+    </tr>
+    <tr>
       <td>2023</td>
-      <td><a href="https://www.imdb.com/title/tt8469104/">青春</a></td>
+      <td><a href="https://www.imdb.com/title/tt8469104/">青春：春 </a></td>
     </tr>
     <tr>
       <td>2023</td>
@@ -720,9 +763,9 @@ tags: private
 
 其他审查机制：
 - 隐藏条目，只有登录用户能看到，如[《天注定》](https://movie.douban.com/subject/21941283/)。
-- 条目只有基本信息，不允许评分、短评、影评、讨论，如[《大路朝天》](https://movie.douban.com/subject/26662337/)。
-- 条目删除后恢复为隐藏条目，只有登录用户能看到，只有基本信息和几条固定短评，如[《沃土》](https://movie.douban.com/subject/34970333/)。
-- 条目存在，站内搜索[不显示结果](https://search.douban.com/movie/subject_search?search_text=%E6%97%A0%E4%BE%9D%E4%B9%8B%E5%9C%B0&cat=1002)，如[《无依之地》](https://movie.douban.com/subject/30458949/)。
+- 条目只有基本信息，不允许评分、短评、影评、讨论，如[《大路朝天》](https://movie.douban.com/subject/26662337/)，[《小熊维尼：血染蜂蜜》](https://movie.douban.com/subject/35914913/)。
+- <del>条目删除后恢复为隐藏条目，只有登录用户能看到，只有基本信息和几条固定短评，如[《沃土》](https://movie.douban.com/subject/34970333/)。</del>又删了。
+- <del>条目存在，站内搜索[不显示结果](https://search.douban.com/movie/subject_search?search_text=%E6%97%A0%E4%BE%9D%E4%B9%8B%E5%9C%B0&cat=1002)，如[《无依之地》](https://movie.douban.com/subject/30458949/)。</del>搜索结果已恢复。
 
 豆瓣替代网站：
 - [NeoDB](https://neodb.social/)
