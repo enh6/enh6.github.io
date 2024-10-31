@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>足迹</title>
+	
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+        .marker {
+            font-size: 20px;
+            text-shadow: #555 0 8px 8px;
+        }
+
+        .title {
+            position: absolute;
+            left: 30px;
+            z-index: 900;
+        }
+	</style>
+
+	<style>body { padding: 0; margin: 0; } #map { height: 100%; width: 100vw; }</style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+
+
+	const tiles_tf = L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}@2x.png?apikey=0ee1b48b1ad4433abe75bdf6695b7820', {
+		maxZoom: 10,
+        minZoom: 3,
+		attribution: 'Maps &copy; <a href="https://www.thunderforest.com">Thunderforest</a>, Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+	});
+
+    const tiles_osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 10,
+        minZoom: 3,
+        detectRetina: true,
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	});
+
+    const locations = [
+        { people: '👫', type: '🏠', pos: [31.1, 121.4], note: "根据地 上海" },
+        { people: '👫', type: '🗼', pos: [35.7, 139.7], note: "2024.04 东京"},
+        { people: '👫', type: '🗻', pos: [35.4, 138.8], note: "2024.04 富士山"},
+        { people: '👫', type: '🏖️', pos: [36.1, 120.4], note: "2024.08 青岛"},
+        { people: '👫', type: '🎡', pos: [28.7, 115.9], note: "2024.10 南昌"},
+        { people: '👫', type: '🎆', pos: [30.7, 121.3], note: "2024.05 金山"},
+        { people: '👫', type: '🚗', pos: [31.7, 121.5], note: "2024.03 崇明"},
+        { people: '👫', type: '🏖️', pos: [25.7, 100.2], note: "2024.01 大理"},
+        { people: '👫', type: '🏖️', pos: [25.0, 102.7], note: "2024.01 昆明"},
+        { people: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.4], note: "2023.12 大阪"},
+        { people: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.2], note: "2023.12 神户"},
+        { people: '🚶🏻‍♀️', type: '⛩️', pos: [35.0, 135.8], note: "2023.12 京都"},
+        { people: '👫', type: '🏖️', pos: [30.7, 104.1], note: "2023.08 成都"},
+        { people: '👫', type: '🏞️', pos: [28.5, 100.2], note: "2023.08 稻城亚丁"},
+        { people: '👫', type: '🏔️', pos: [30.0, 100.9], note: "2023.08 川西"},
+        { people: '👫', type: '⛰️', pos: [28.3, 121.6], note: "2023.05 温岭"},
+        { people: '👫', type: '🏖️', pos: [32.1, 118.8], note: "2023.03 南京"},
+        { people: '👫', type: '🏝️', pos: [18.3, 109.4], note: "2022.07 三亚"},
+        { people: '👫', type: '🏖️', pos: [31.3, 120.6], note: "2021.10 苏州"},
+        { people: '🚶🏻‍♂️', type: '🏖️', pos: [30.8, 120.5], note: "2021.05 乌镇"},
+    ];
+
+    const make_marker = function(l) {
+        const text = `<b>${l.people} ${l.note}</b>`;
+        return L.marker(l.pos, {
+            icon: L.divIcon({
+                html: l.type,
+                iconSize: [20, 20],
+                className: 'marker',
+                popupAnchor: [0, -10]})})
+            .bindTooltip(text, {
+                direction: 'right',
+                offset: [20, 5]
+            })
+            .bindPopup(text);
+    };
+
+    const overlay_0 = L.layerGroup(locations.filter(l => l.people == '👫').map(make_marker));
+    const overlay_1 = L.layerGroup(locations.filter(l => l.people == '🚶🏻‍♂️').map(make_marker));
+    const overlay_2 = L.layerGroup(locations.filter(l => l.people == '🚶🏻‍♀️').map(make_marker));
+
+    const map = L.map('map', {
+        center: [31, 121],
+        zoom: 6,
+        layers: [tiles_tf, overlay_0, overlay_1, overlay_2]
+    });
+
+    L.control.scale().addTo(map);
+
+    const base_layers = {
+        "OpenStreenMap": tiles_osm,
+        "ThunderForest": tiles_tf
+    }
+
+    const overlays = {
+        "👫 ZZ & XZ": overlay_0,
+        "🚶🏻‍♀️ ZZ": overlay_1,
+        "🚶🏻‍♂️ XZ": overlay_2,
+    }
+
+    var layer_control = L.control.layers(base_layers, overlays).addTo(map);
+</script>
+
+</body>
+</html>
