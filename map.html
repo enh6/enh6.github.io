@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<base target="_top">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>足迹</title>
-	
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>足迹</title>
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-	<style>
-		html, body {
-			height: 100%;
-			margin: 0;
-		}
-		.leaflet-container {
-			height: 400px;
-			width: 600px;
-			max-width: 100%;
-			max-height: 100%;
-		}
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .leaflet-container {
+            height: 400px;
+            width: 600px;
+            max-width: 100%;
+            max-height: 100%;
+        }
 
         .marker {
             font-size: 20px;
             text-shadow: #555 0 8px 8px;
         }
+    </style>
 
-        .title {
-            position: absolute;
-            left: 30px;
-            z-index: 900;
-        }
-	</style>
-
-	<style>body { padding: 0; margin: 0; } #map { height: 100%; width: 100vw; }</style>
+    <style>body { padding: 0; margin: 0; } #map { height: 100%; width: 100vw; }</style>
 </head>
 <body>
 
@@ -43,44 +37,93 @@
 <script>
 
 
-	const tiles_tf = L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}@2x.png?apikey=0ee1b48b1ad4433abe75bdf6695b7820', {
-		maxZoom: 10,
+    const tiles_tf = L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}@2x.png?apikey=0ee1b48b1ad4433abe75bdf6695b7820', {
+        maxZoom: 10,
         minZoom: 3,
-		attribution: 'Maps &copy; <a href="https://www.thunderforest.com">Thunderforest</a>, Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-	});
+        attribution: 'Maps &copy; <a href="https://www.thunderforest.com">Thunderforest</a>, Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    });
 
     const tiles_osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 10,
+        maxZoom: 10,
         minZoom: 3,
         detectRetina: true,
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	});
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
 
     const locations = [
-        { people: '👫', type: '🏠', pos: [31.1, 121.4], note: "根据地 上海" },
-        { people: '👫', type: '🗼', pos: [35.7, 139.7], note: "2024.04 东京"},
-        { people: '👫', type: '🗻', pos: [35.4, 138.8], note: "2024.04 富士山"},
-        { people: '👫', type: '🏖️', pos: [36.1, 120.4], note: "2024.08 青岛"},
-        { people: '👫', type: '🎡', pos: [28.7, 115.9], note: "2024.10 南昌"},
-        { people: '👫', type: '🎆', pos: [30.7, 121.3], note: "2024.05 金山"},
-        { people: '👫', type: '🚗', pos: [31.7, 121.5], note: "2024.03 崇明"},
-        { people: '👫', type: '🏖️', pos: [25.7, 100.2], note: "2024.01 大理"},
-        { people: '👫', type: '🏖️', pos: [25.0, 102.7], note: "2024.01 昆明"},
-        { people: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.4], note: "2023.12 大阪"},
-        { people: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.2], note: "2023.12 神户"},
-        { people: '🚶🏻‍♀️', type: '⛩️', pos: [35.0, 135.8], note: "2023.12 京都"},
-        { people: '👫', type: '🏖️', pos: [30.7, 104.1], note: "2023.08 成都"},
-        { people: '👫', type: '🏞️', pos: [28.5, 100.2], note: "2023.08 稻城亚丁"},
-        { people: '👫', type: '🏔️', pos: [30.0, 100.9], note: "2023.08 川西"},
-        { people: '👫', type: '⛰️', pos: [28.3, 121.6], note: "2023.05 温岭"},
-        { people: '👫', type: '🏖️', pos: [32.1, 118.8], note: "2023.03 南京"},
-        { people: '👫', type: '🏝️', pos: [18.3, 109.4], note: "2022.07 三亚"},
-        { people: '👫', type: '🏖️', pos: [31.3, 120.6], note: "2021.10 苏州"},
-        { people: '🚶🏻‍♂️', type: '🏖️', pos: [30.8, 120.5], note: "2021.05 乌镇"},
+        { who: '👫', type: '🎡', pos: [28.7, 115.9], note: "2024.10 南昌"},
+        { who: '👫', type: '🌅', pos: [36.1, 120.4], note: "2024.08 青岛"},
+        { who: '👫', type: '🗼', pos: [35.7, 139.7], note: "2024.04 东京"},
+        { who: '👫', type: '🗻', pos: [35.4, 138.8], note: "2024.04 富士山"},
+        { who: '👫', type: '🎆', pos: [30.7, 121.3], note: "2024.05 金山"},
+        { who: '👫', type: '🚗', pos: [31.7, 121.5], note: "2024.03 崇明"},
+        { who: '👫', type: '🏖️', pos: [25.7, 100.2], note: "2024.01 大理"},
+        { who: '👫', type: '🏖️', pos: [25.0, 102.7], note: "2024.01 昆明"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.4], note: "2023.12 大阪"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.2], note: "2023.12 神户"},
+        { who: '🚶🏻‍♀️', type: '⛩️', pos: [35.0, 135.8], note: "2023.12 京都"},
+        { who: '👫', type: '🐼', pos: [30.7, 104.1], note: "2023.08 成都"},
+        { who: '👫', type: '🏞️', pos: [28.5, 100.2], note: "2023.08 稻城亚丁"},
+        { who: '👫', type: '🏔️', pos: [30.0, 100.9], note: "2023.08 川西"},
+        { who: '👫', type: '⛰️', pos: [28.3, 121.6], note: "2023.05 温岭"},
+        { who: '👫', type: '🏖️', pos: [32.1, 118.8], note: "2023.03 南京"},
+        { who: '👫', type: '🏖️', pos: [18.3, 109.4], note: "2022.07 三亚"},
+        { who: '👫', type: '🏖️', pos: [31.3, 120.6], note: "2021.10 苏州"},
+        { who: '👫', type: '💒', pos: [32.4, 119.4], note: "2021.05 扬州"},
+        { who: '👫', type: '🏖️', pos: [27.3, 116.9], note: "2021.05 黎川"},
+        { who: '👫', type: '⛰️', pos: [27.5, 116.6], note: "2021.04 麻姑山"},
+        { who: '👫', type: '💒', pos: [31.8, 121.6], note: "2021.04 启东"},
+        { who: '👫', type: '⛰️', pos: [30.3, 120.2], note: "2021.03 杭州"},
+        { who: '👫', type: '🚗', pos: [30.9, 121.9], note: "2020.10 临港"},
+
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [30.8, 120.5], note: "2021.05 乌镇"},
+        { who: '🚶🏻‍♂️', type: '⛰️', pos: [34.4, 113.5], note: "2021.02 始祖山"},
+        { who: '🚶🏻‍♂️', type: '⛰️', pos: [30.5, 117.8], note: "2019.12 九华山"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [29.6, 106.6], note: "2019.02 重庆"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [31.4, 120.1], note: "2018.06 无锡"},
+        { who: '🚶🏻‍♂️', type: '🏔️', pos: [26.9, 100.2], note: "2018.02 丽江"},
+        { who: '🚶🏻‍♂️', type: '🏞️', pos: [27.7, 100.8], note: "2018.02 泸沽湖"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [29.8, 121.4], note: "2017.10 宁波"},
+        { who: '🚶🏻‍♂️', type: '💒', pos: [29.4, 111.6], note: "2017.02 常德"},
+        { who: '🚶🏻‍♂️', type: '💒', pos: [32.7, 112.1], note: "2016.02 邓州"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [30.7, 122.4], note: "2015.07 嵊泗"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [30.0, 120.6], note: "2015.05 绍兴"},
+        { who: '🚶🏻‍♂️', type: '🚴🏻', pos: [30.8, 121.5], note: "2014.09 奉贤"},
+
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [33.6, 130.4], note: "2019.09 福冈"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [3.15, 101.7], note: "2018.11 马来西亚"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 133.9], note: "2018.02 冈山"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [34.7, 135.8], note: "2017.11 奈良"},
+        { who: '🚶🏻‍♀️', type: '🏫', pos: [32.8, 129.9], note: "2017.09 长崎"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [13.7, 100.5], note: "2016.05 泰国"},
+
+        { who: '🚶🏻‍♂️', type: '⛰️', pos: [34.5, 110.1], note: "华山"},
+        { who: '🚶🏻‍♂️', type: '⛰️', pos: [30.2, 118.2], note: "黄山"},
+        { who: '🚶🏻‍♂️', type: '⛰️', pos: [36.3, 117.1], note: "泰山"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [24.5, 118.1], note: "厦门"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [34.3, 108.9], note: "西安"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [39.9, 116.4], note: "北京"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [30.6, 114.3], note: "武汉"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [31.9, 117.3], note: "合肥"},
+        { who: '🚶🏻‍♂️', type: '🧳', pos: [22.3, 114.2], note: "香港"},
+        { who: '🚶🏻‍♂️', type: '🧳', pos: [22.2, 113.6], note: "澳门"},
+        { who: '🚶🏻‍♂️', type: '🧳', pos: [34.8, 113.7], note: "郑州"},
+        { who: '🚶🏻‍♂️', type: '🏠', pos: [34.0, 113.8], note: "许昌"},
+        { who: '🚶🏻‍♂️', type: '🏖️', pos: [34.7, 112.4], note: "洛阳"},
+
+        { who: '🚶🏻‍♀️', type: '🏫', pos: [25.9, 114.9], note: "赣州"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [24.5, 118.05], note: "厦门"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [22.6, 114.0], note: "深圳"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [23.2, 113.2], note: "广州"},
+        { who: '🚶🏻‍♀️', type: '🧳', pos: [39.9, 116.45], note: "北京"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [25.4, 119.0], note: "莆田"},
+        { who: '🚶🏻‍♀️', type: '🏖️', pos: [29.3, 115.8], note: "九江"},
+
+        { who: '👫', type: '🏠', pos: [31.1, 121.4], note: "上海" },
     ];
 
     const make_marker = function(l) {
-        const text = `<b>${l.people} ${l.note}</b>`;
+        const text = `<b>${l.who} ${l.note}</b>`;
         return L.marker(l.pos, {
             icon: L.divIcon({
                 html: l.type,
@@ -90,13 +133,12 @@
             .bindTooltip(text, {
                 direction: 'right',
                 offset: [20, 5]
-            })
-            .bindPopup(text);
+            });
     };
 
-    const overlay_0 = L.layerGroup(locations.filter(l => l.people == '👫').map(make_marker));
-    const overlay_1 = L.layerGroup(locations.filter(l => l.people == '🚶🏻‍♂️').map(make_marker));
-    const overlay_2 = L.layerGroup(locations.filter(l => l.people == '🚶🏻‍♀️').map(make_marker));
+    const overlay_0 = L.layerGroup(locations.filter(l => l.who == '👫').map(make_marker));
+    const overlay_1 = L.layerGroup(locations.filter(l => l.who == '🚶🏻‍♀️').map(make_marker));
+    const overlay_2 = L.layerGroup(locations.filter(l => l.who == '🚶🏻‍♂️').map(make_marker));
 
     const map = L.map('map', {
         center: [31, 121],
