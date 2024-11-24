@@ -31,7 +31,7 @@ tags: private
     <tr>
       <td>2024</td>
       <td>中国</td>
-      <td><a href="https://www.themoviedb.org/movie/1370223">漂亮朋友</a></td>
+      <td><a href="https://www.themoviedb.org/movie/1234779">漂亮朋友</a></td>
     </tr>
     <tr>
       <td>2024</td>
