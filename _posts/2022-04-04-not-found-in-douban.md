@@ -777,7 +777,7 @@ NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/3ezQ
 
 Letterboxd网友总结的[豆瓣不收录电影](https://letterboxd.com/chiujohn/list/the-movie-cant-rattings-at-douban/)
 
-持续更新中，最后更新时间：2024-10-24。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com)。
+最后更新时间：2024-12-01。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com)。
 
 <script src="/assets/js/sortable.js"></script>
 <script>
