@@ -228,6 +228,10 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+
+  > a {
+    color: $grey-color;
+  }
 }
 
 .post-link {
@@ -360,6 +364,10 @@
 
   .short-post-content {
     margin-top: 3px;
+  }
+
+  #expand {
+    margin: -2px;
   }
 }
 
