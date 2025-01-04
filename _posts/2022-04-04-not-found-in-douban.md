@@ -21,6 +21,11 @@ tags: private
     <tr>
       <td>未上映</td>
       <td>中国</td>
+      <td><a href="https://www.imdb.com/title/tt32238611/">捆绑上天堂</a></td>
+    </tr>
+    <tr>
+      <td>未上映</td>
+      <td>中国</td>
       <td><a href="https://www.imdb.com/title/tt29580232/">援军明日到达</a></td>
     </tr>
     <tr>
@@ -777,7 +782,7 @@ NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/3ezQ
 
 Letterboxd网友总结的[豆瓣不收录电影](https://letterboxd.com/chiujohn/list/the-movie-cant-rattings-at-douban/)
 
-最后更新时间：2024-12-01。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com)。
+最后更新时间：2025-01-04。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com)。
 
 <script src="/assets/js/sortable.js"></script>
 <script>
