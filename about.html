@@ -9,11 +9,11 @@ permalink: /about/
   <ul>
     <li>
       <p>关于我</p>
-      <p><code>undefined</code></p>
+      <p><code id="about-me">undefined</code></p>
     </li>
     <li>
       <p>联系方式</p>
-      <p>Email: <a href="mailto:enh6@hutrua.com">enh6@hutrua.com</a></p>
+      <p>Email: <a href="mailto:enh6@hutrua.com?subject=hello~">enh6@hutrua.com</a></p>
       <p>Fediverse: <a href="https://social.hutrua.com/@enh6">@enh6@social.hutrua.com</a></p>
     </li>
   </ul>
@@ -127,6 +127,38 @@ permalink: /about/
 </div>
 <script>
   async function init() {
+    let about = document.getElementById("about-me");
+    let desc = [
+      "Sorry, but I’m just some random guy on the internet, not really into talking about myself (●'◡'●)",
+      "human",
+      "NaN",
+      "Null",
+    ];
+    about.addEventListener("click", (evt)=>{
+      let s = desc.pop();
+      if (!s) return;
+
+      let rm = true;
+      let done = false;
+
+      let show = function() {
+        if (done) return;
+        if (about.innerHTML === "")
+          rm = false;
+        if (rm) {
+          about.innerHTML = about.innerHTML.substr(0, about.innerHTML.length - 1);
+        } else {
+          about.innerHTML += s[0];
+          s = s.substr(1, s.length);
+        }
+        if (s === "")
+          done = true;
+        setTimeout(show, 50);
+      };
+
+      show();
+    });
+
     let tab1 = document.getElementById("tab1");
     let tab2 = document.getElementById("tab2");
     let div1 = document.getElementById("about-site");
@@ -182,6 +214,10 @@ permalink: /about/
             if (v.getAttribute("type").startsWith("image/")) {
               li.innerHTML += `<img src="${v.getAttribute("url")}">`;
             }
+            if (v.getAttribute("type").startsWith("video/")) {
+              li.innerHTML += `<video controls src="${v.getAttribute("url")}" type="${v.getAttribute("type")}">`;
+            }
+            li.innerHTML += ' ';
           });
           nodes.push(li);
         });

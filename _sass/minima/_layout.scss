@@ -366,6 +366,11 @@
     margin-top: 3px;
   }
 
+  video,img {
+    max-width: 48%;
+    min-width: 200px;
+  }
+
   #expand {
     margin: -2px;
   }
