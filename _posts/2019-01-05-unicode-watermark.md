@@ -44,3 +44,7 @@ Unicode支持不同的文字书写方向。Right-to-Left Override字符`U+202E`�
 Unicode基本平面BMP以外的字符，也就是无法用两个字节表示的字符，可以用两个基本平面内的Surrogate字符来表示。例如emoji字符就在基本平面外，😀（`U+1F600`）可以用Surrogate Pair`U+D83D`加`U+DE00`表示。
 
 然而，Surrogate Pair只能在UTF-16编码中使用，在其他编码如UTF-8中是无效的；而正常编码的码位超过了两字节，无法在UTF-16编码中表示。所以这个方法并不可行。
+
+# 7. 变体选择符
+
+[这里看到的](https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/)
