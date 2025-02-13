@@ -45,6 +45,6 @@ Unicode基本平面BMP以外的字符，也就是无法用两个字节表示的�
 
 然而，Surrogate Pair只能在UTF-16编码中使用，在其他编码如UTF-8中是无效的；而正常编码的码位超过了两字节，无法在UTF-16编码中表示。所以这个方法并不可行。
 
-# 7. 变体选择符
+## 7. 变体选择符
 
 [这里看到的](https://paulbutler.org/2025/smuggling-arbitrary-data-through-an-emoji/)
