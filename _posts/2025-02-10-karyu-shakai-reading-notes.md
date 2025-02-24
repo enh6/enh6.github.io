@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 《下流社会》
+title: 「下流社会」
 author: enh6
 categories: blog
 tags: note
 ---
 
-- 下流社会 新たな階層集団の出現 
+- 「下流社会 新たな階層集団の出現」
 - 三浦展
 - 光文社 2005
 
