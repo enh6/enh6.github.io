@@ -196,7 +196,7 @@ permalink: /about/
       function expand() {
         const nodes = [];
         posts.slice(0, n).forEach(post => {
-          const content = post.querySelector("title").innerHTML;
+          const content = post.querySelector("description").firstChild.wholeText;
           const url = post.querySelector("link").innerHTML;
           const date = new Date(post.querySelector("pubDate").innerHTML);
 
@@ -210,7 +210,7 @@ permalink: /about/
             <div class="short-post-content">${content}</div>
           `;
 
-          post.querySelectorAll("enclosure").forEach(v => {
+          post.querySelectorAll("content").forEach(v => {
             if (v.getAttribute("type").startsWith("image/")) {
               li.innerHTML += `<img src="${v.getAttribute("url")}">`;
             }
