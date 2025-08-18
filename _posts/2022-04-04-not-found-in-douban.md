@@ -30,6 +30,11 @@ tags: private
     </tr>
     <tr>
       <td>2025</td>
+      <td>美国</td>
+      <td><a href="https://www.themoviedb.org/movie/1119878-ice-road-vengeance">冰路营救2：复仇</a></td>
+    </tr>
+    <tr>
+      <td>2025</td>
       <td>香港</td>
       <td><a href="https://www.themoviedb.org/movie/999689">众生相</a></td>
     </tr>
@@ -199,6 +204,11 @@ tags: private
       <td><a href="https://www.imdb.com/title/tt6021632/">风景</a></td>
     </tr>
     <tr>
+      <td>2016</td>
+      <td>日本</td>
+      <td><a href="https://www.imdb.com/title/tt4769824/">在这世界的角落</a></td>
+    </tr>
+    <tr>
       <td>2015</td>
       <td>香港</td>
       <td><a href="https://www.imdb.com/title/tt5269560/">十年</a></td>
@@ -348,7 +358,12 @@ tags: private
   </thead>
   <tbody>
     <tr>
-      <td>未播出</td>
+      <td>2025</td>
+      <td>中国</td>
+      <td><a href="https://www.themoviedb.org/tv/292035-revenged-love">逆爱</a></td>
+    </tr>
+    <tr>
+      <td>2025</td>
       <td>台湾</td>
       <td><a href="https://www.imdb.com/title/tt26687035/">零日攻击</a></td>
     </tr>
@@ -787,7 +802,7 @@ NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/3ezQ
 
 Letterboxd网友总结的[豆瓣不收录电影](https://letterboxd.com/chiujohn/list/the-movie-cant-rattings-at-douban/)
 
-最后更新时间：2025-03-18。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com?subject=%E8%B1%86%E7%93%A3%E6%97%A0%E6%9D%A1%E7%9B%AE%E5%BD%B1%E7%89%87%E4%BA%A4%E6%B5%81)。
+最后更新时间：2025-08-18。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com?subject=%E8%B1%86%E7%93%A3%E6%97%A0%E6%9D%A1%E7%9B%AE%E5%BD%B1%E7%89%87%E4%BA%A4%E6%B5%81)。
 
 <script src="/assets/js/sortable.js"></script>
 <script>
