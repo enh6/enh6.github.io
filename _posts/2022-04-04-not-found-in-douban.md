@@ -369,11 +369,6 @@ tags: private
     </tr>
     <tr>
       <td>2024</td>
-      <td>日本</td>
-      <td><a href="https://www.imdb.com/title/tt28534254/">狼与香辛料 行商邂逅贤狼</a></td>
-    </tr>
-    <tr>
-      <td>2024</td>
       <td>美国</td>
       <td><a href="https://www.imdb.com/title/tt8773420/">外籍之人</a></td>
     </tr>
@@ -386,11 +381,6 @@ tags: private
       <td>2022</td>
       <td>日本</td>
       <td><a href="https://www.imdb.com/title/tt13616990/">链锯人(电锯人)</a></td>
-    </tr>
-    <tr>
-      <td>2022</td>
-      <td>韩国</td>
-      <td><a href="https://www.imdb.com/title/tt20234568/">弱小英雄</a></td>
     </tr>
     <tr>
       <td>2021</td>
@@ -531,6 +521,11 @@ tags: private
       <td>2001</td>
       <td>韩国</td>
       <td><a href="https://zh.wikipedia.org/zh-cn/%E6%98%8E%E6%88%90%E7%9A%87%E5%90%8E_(%E9%9B%BB%E8%A6%96%E5%8A%87)">明成皇后</a></td>
+    </tr>
+    <tr>
+      <td>1999</td>
+      <td>美国</td>
+      <td><a href="https://www.imdb.com/title/tt0182576/">恶搞之家 第一季</a></td>
     </tr>
     <tr>
       <td>1997</td>
@@ -794,6 +789,7 @@ tags: private
 - 条目只有基本信息，不允许评分、短评、影评、讨论，如[《大路朝天》](https://movie.douban.com/subject/26662337/)，[《小熊维尼：血染蜂蜜》](https://movie.douban.com/subject/35914913/)。
 - <del>条目删除后恢复为隐藏条目，只有登录用户能看到，只有基本信息和几条固定短评，如[《沃土》](https://movie.douban.com/subject/34970333/)。</del>又删了。
 - <del>条目存在，站内搜索[不显示结果](https://search.douban.com/movie/subject_search?search_text=%E6%97%A0%E4%BE%9D%E4%B9%8B%E5%9C%B0&cat=1002)，如[《无依之地》](https://movie.douban.com/subject/30458949/)。</del>搜索结果已恢复。
+- 影人页面删除，在所有参与电影的演职员列表中消失，如吴亦凡。
 
 豆瓣替代网站：
 - [NeoDB](https://neodb.social/)
@@ -802,7 +798,7 @@ NeoDB网友总结的[豆瓣不存在影视](https://neodb.social/collection/3ezQ
 
 Letterboxd网友总结的[豆瓣不收录电影](https://letterboxd.com/chiujohn/list/the-movie-cant-rattings-at-douban/)
 
-最后更新时间：2025-08-18。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com?subject=%E8%B1%86%E7%93%A3%E6%97%A0%E6%9D%A1%E7%9B%AE%E5%BD%B1%E7%89%87%E4%BA%A4%E6%B5%81)。
+最后更新时间：2025-08-21。感谢热心网友的补充。欢迎来信交流：[enh6@hutrua.com](mailto:enh6@hutrua.com?subject=%E8%B1%86%E7%93%A3%E6%97%A0%E6%9D%A1%E7%9B%AE%E5%BD%B1%E7%89%87%E4%BA%A4%E6%B5%81)。
 
 <script src="/assets/js/sortable.js"></script>
 <script>
