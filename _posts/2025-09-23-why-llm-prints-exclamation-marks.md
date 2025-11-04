@@ -48,10 +48,10 @@ Unicode最前面的字符编码是兼容ASCII编码的，ASCII编码中第一个
 
 **那么问题又来了，为什么ASCII编码中第一个可打印的符号是`!`呢？**
 
-ASCII编码的字符排列是参照当时机械打字机的键盘排布来的，而`!`就是在`1`加`Shift`这个按键位置，也沿用到我们至今在用的电脑键盘上。而`!`排在这里的原因是`!`和`1`都是最后被加到打字机键盘的字符，直到1960年代左右才逐渐成为标配的。
+ASCII编码的字符排列是参照当时机械打字机的键盘排布来的，而`!`就是在`1`加`Shift`这个按键位置，也沿用到我们至今在用的电脑键盘上。而`!`排在这里的原因是[`!`和`1`都是最后被加到打字机键盘的字符](https://en.wikipedia.org/wiki/Typewriter#Other_layouts_for_English:~:text=On%20modern%20keyboards%2C%20the%20exclamation%20point%20is%20the%20shifted%20character%20on%20the%201%20key%2C%20because%20these%20were%20the%20last%20characters%20to%20become%20%22standard%22%20on%20keyboards.)，直到1960年代左右才逐渐成为标配的。
 
 **那么问题又来了，为什么打字机键盘几十年里都没有`!`和`1`这些字符呢？**
 
-因为可以用小写`l`来代替`1`，用`'`加`backspace`加`.`组合来合成`!`。
+因为可以用小写`l`来代替`1`，[用`'`加`backspace`加`.`组合来合成`!`](https://en.wikipedia.org/wiki/Typewriter#Other_layouts_for_English:~:text=Similarly%2C%20the%20exclamation%20point%20was%20created%20by%20combining%20an%20apostrophe%20and%20a%20period)。
 
 **完。**
